@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakingVirus", "BreakingVirus\BreakingVirus.csproj", "{DB1E64DC-7D75-4D42-B638-C9E82646964D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB1E64DC-7D75-4D42-B638-C9E82646964D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1E64DC-7D75-4D42-B638-C9E82646964D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1E64DC-7D75-4D42-B638-C9E82646964D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1E64DC-7D75-4D42-B638-C9E82646964D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A129D62E-BDEA-490D-A0DF-4C463DF91DB5}
+	EndGlobalSection
+EndGlobal
