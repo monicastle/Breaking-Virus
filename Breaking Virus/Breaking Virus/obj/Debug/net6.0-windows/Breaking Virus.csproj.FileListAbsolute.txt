@@ -4,7 +4,6 @@ C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.dll
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.pdb
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.AssemblyReference.cache
-C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Form1.resources
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.GenerateResource.cache
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.AssemblyInfoInputs.cache
@@ -15,3 +14,5 @@ C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.pdb
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Resource1.resources
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.mainMenu.resources
