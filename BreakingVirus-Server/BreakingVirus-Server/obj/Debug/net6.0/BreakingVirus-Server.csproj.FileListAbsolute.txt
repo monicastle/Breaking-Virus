@@ -1,0 +1,15 @@
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.exe
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.deps.json
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.runtimeconfig.json
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.dll
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.pdb
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.csproj.AssemblyReference.cache
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.AssemblyInfoInputs.cache
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.AssemblyInfo.cs
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.csproj.CoreCompileInputs.cache
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.dll
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\refint\BreakingVirus-Server.dll
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.pdb
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.genruntimeconfig.cache
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\ref\BreakingVirus-Server.dll
