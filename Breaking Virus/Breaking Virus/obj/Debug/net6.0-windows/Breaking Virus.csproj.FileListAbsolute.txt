@@ -17,3 +17,22 @@ C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Resource1.resources
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.mainMenu.resources
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.SinglePlayerMenu.resources
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.exe
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.deps.json
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.runtimeconfig.json
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.pdb
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.AssemblyReference.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.MainMenu.resources
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Resource1.resources
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.SinglePlayerMenu.resources
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.GenerateResource.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.AssemblyInfoInputs.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.AssemblyInfo.cs
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.CoreCompileInputs.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\refint\Breaking Virus.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.pdb
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
