@@ -16,3 +16,4 @@ C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Resource1.resources
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.mainMenu.resources
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.SinglePlayerMenu.resources
