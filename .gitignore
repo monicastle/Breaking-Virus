@@ -1,4 +1,3 @@
-
 *.editorconfig
 *.vsidx
 *.lock
@@ -9,3 +8,4 @@
 BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
 BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.AssemblyInfo.cs
 BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.GlobalUsings.g.cs
+.vs
