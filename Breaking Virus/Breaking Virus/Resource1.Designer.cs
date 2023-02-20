@@ -93,9 +93,9 @@ namespace Breaking_Virus {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Main_Menu {
+        internal static System.Drawing.Bitmap MainMenu {
             get {
-                object obj = ResourceManager.GetObject("Main Menu", resourceCulture);
+                object obj = ResourceManager.GetObject("MainMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

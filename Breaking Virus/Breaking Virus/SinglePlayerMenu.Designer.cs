@@ -99,11 +99,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Breaking_Virus.Resource1.Select_Virus_SP;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1160);
             this.Controls.Add(this.btn_Ebola);
             this.Controls.Add(this.btn_Dengue);
             this.Controls.Add(this.btn_Covid19);
             this.Controls.Add(this.btn_returnMainMenu);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "SinglePlayerMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
