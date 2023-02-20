@@ -42,7 +42,7 @@ namespace Breaking_Virus
 
         public static void connect_to_server() {
             try {
-                string SERVER_IP = "192.168.0.12";
+                string SERVER_IP = "192.168.5.185"; //"192.168.5.185"  192.168.0.12
                 int PORT_NO = 8001;
                 //while (true)
                 //{
@@ -75,26 +75,49 @@ namespace Breaking_Virus
             InitializeComponent();
 
             // INICIO
-
+            // Create the token source.
+            //CancellationTokenSource tokenSource = new();
             ThreadStart childref_LatinA = new ThreadStart(CallToChildThread);
             Thread LatinAmericaThread = new Thread(childref_LatinA);
+            //LatinAmericaThread = new(
+            //        () => LongRunningOperation(tokenSource.Token)
+            //    );
 
             //loop to keep starting a new task for client
             bool question = true;
             while (question) {
-
+                Console.WriteLine("Thread Status 1= {0}", LatinAmericaThread.IsAlive);
                 LatinAmericaThread.Start();
+                Console.WriteLine("Thread Status 2= {0}", LatinAmericaThread.IsAlive);
+
+                //tokenSource.Cancel();
+                //LatinAmericaThread.Join();
+                //Console.WriteLine("Cancellation set in token source...");
+                // Cancellation should have happened, so call Dispose.
+                //tokenSource.Dispose();
+                //Thread.Sleep(1500);
+
                 //stop the main thread for some time
                 //Thread.Sleep(2000);
                 //after doing task abort
                 //LatinAmericaThread.Suspend();
                 //LatinAmericaThread.Abort();
+                Console.WriteLine("Thread Status 3= {0}", LatinAmericaThread.IsAlive);
                 Console.WriteLine("Wanna start another client: true or false");
                 string answer = Console.ReadLine() + "";
                 question = (answer.Equals("T")) ? true : false;
             }
 
             // FINAL
+        }
+
+        void LongRunningOperation(CancellationToken token)
+        {
+            while (!token.IsCancellationRequested)
+            { // Check if the caller requested cancellation. 
+                Console.WriteLine("I'm running");
+                Thread.Sleep(500);
+            }
         }
 
         private void btn_Singleplayer_Click(object sender, EventArgs e)
