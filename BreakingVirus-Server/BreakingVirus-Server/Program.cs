@@ -25,7 +25,7 @@ namespace Servers {
 
         public static void connection_to_client() {
             try {
-                IPAddress ipAd = IPAddress.Parse("192.168.0.12");
+                IPAddress ipAd = IPAddress.Parse("192.168.5.185");
                 TcpListener listener = new TcpListener(ipAd, 8001);
                 listener.Start();
                 Console.WriteLine("The server is running at port 8001...");

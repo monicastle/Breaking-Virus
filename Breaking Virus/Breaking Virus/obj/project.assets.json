@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\tyler\\.nuget\\packages\\": {},
+    "C:\\Users\\chand\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\Proyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
+      "projectUniqueName": "C:\\Users\\chand\\OneDrive\\Desktop\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
       "projectName": "Breaking Virus",
-      "projectPath": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\Proyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
-      "packagesPath": "C:\\Users\\tyler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\Proyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\obj\\",
+      "projectPath": "C:\\Users\\chand\\OneDrive\\Desktop\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
+      "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chand\\OneDrive\\Desktop\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

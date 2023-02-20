@@ -36,3 +36,22 @@ C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proy
 C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.pdb
 C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
 C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\Proyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.exe
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.deps.json
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.runtimeconfig.json
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.dll
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\bin\Debug\net6.0-windows\Breaking Virus.pdb
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.AssemblyReference.cache
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.MainMenu.resources
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Resource1.resources
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.SinglePlayerMenu.resources
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.GenerateResource.cache
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.AssemblyInfoInputs.cache
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.AssemblyInfo.cs
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.csproj.CoreCompileInputs.cache
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.dll
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\refint\Breaking Virus.dll
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.pdb
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
+C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
