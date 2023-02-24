@@ -127,8 +127,8 @@
   <data name="Dengue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Dengue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Select Virus SP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Select Virus SP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SelectVirusSP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SelectVirusSP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
