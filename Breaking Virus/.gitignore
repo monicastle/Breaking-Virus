@@ -1,0 +1,34 @@
+.vs
+*.editorconfig
+*.vsidx
+*.lock
+.vs/Breaking-Virus/v17/.wsuo
+*.json
+*.sqlite
+*.cache
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.AssemblyInfo.cs
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.GlobalUsings.g.cs
+.vs
+Breaking Virus/Breaking Virus/obj/Debug/net6.0-windows/Breaking Virus.assets.cache
+Breaking Virus/Breaking Virus/obj/Debug/net6.0-windows/Breaking Virus.assets.cache
+Breaking Virus/Breaking Virus/obj/Debug/net6.0-windows/Breaking Virus.assets.cache
+*.editorconfig
+*.cache
+Breaking Virus/Breaking Virus/obj/Release/net6.0-windows/Breaking Virus.GeneratedMSBuildEditorConfig.editorconfig
+BreakingVirus-Server/BreakingVirus-Server/obj/Debug/net6.0/BreakingVirus-Server.assets.cache
+*.editorconfig
+.vs/Breaking-Virus/FileContentIndex/2fbb0b0d-8979-447d-a1a9-96ba8b96e33a.vsidx
+.vs/Breaking-Virus/FileContentIndex/8633b4ee-6f99-4d77-befe-607ff9e3732c.vsidx
+.vs/Breaking-Virus/FileContentIndex/adb4630d-07bc-4d9b-9aa3-4d4924519fda.vsidx
+.vs/Breaking-Virus/FileContentIndex/bafd5152-8433-4711-968c-e4fe4baef058.vsidx
+.vs/Breaking-Virus/FileContentIndex/read.lock
+.vs/Breaking-Virus/v17/.wsuo
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.AssemblyInfo.cs
+BreakingVirus-Server/BreakingVirus-Server/obj/Release/net6.0/BreakingVirus-Server.GlobalUsings.g.cs
+*.editorconfig
+*.cache

@@ -6,22 +6,28 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
+using System.IO;
+using System.IO.Pipes;
+
 namespace Servers {
     class Program {
-        public static void CallToChildThread() {
-            Console.WriteLine("Lating Ametica thread starts");
 
-            int population = 660000000; //660 million
-            int healthy = 0, infected = 0, dead = 0;
-            // the thread is paused for 5000 milliseconds
-            int sleepfor = 5000;
+        static object monitor = new object();
 
-            connection_to_client();
+        //public static void CallToChildThread() {
+        //    Console.WriteLine("Lating Ametica thread starts");
 
-            Console.WriteLine("Child Thread Paused for {0} seconds", sleepfor / 1000);
-            //Thread.Sleep(sleepfor);
-            Console.WriteLine("Child thread resumes");
-        }
+        //    //int population = 660000000; //660 million
+        //    //int healthy = 0, infected = 0, dead = 0;
+        //    // the thread is paused for 5000 milliseconds
+        //    int sleepfor = 5000;
+
+            
+
+        //    Console.WriteLine("Child Thread Paused for {0} seconds", sleepfor / 1000);
+        //    //Thread.Sleep(sleepfor);
+        //    Console.WriteLine("Child thread resumes");
+        //}
 
         public static void connection_to_client() {
             try {
@@ -55,11 +61,36 @@ namespace Servers {
             }
         }
 
-        static void Main(string[] args) {
+        public static void receiveDataFromConsumer() {
+            string pipeName = "forwardPipe";
+            Console.WriteLine("Waiting for incoming data: ");
+            while (true) {
+                try {
+                    using (var pipeReader = new NamedPipeServerStream(pipeName, PipeDirection.In)) {
+                        pipeReader.WaitForConnection();
+                        var buffer = new byte[1024];
 
-            ThreadStart childref_LatinA = new ThreadStart(CallToChildThread);
-            Thread LatinAmericaThread = new Thread(childref_LatinA);
-            LatinAmericaThread.Start();
+                        Monitor.Enter(monitor); // acquire the monitor lock
+                        pipeReader.Read(buffer, 0, buffer.Length);
+                        var data = Encoding.UTF8.GetString(buffer).Trim('\0');
+                        Console.WriteLine("Received data from consumer: {0}", data);
+                        Monitor.Exit(monitor); // release the monitor lock
+                    }
+                }
+                catch (Exception ex) {
+                    Console.WriteLine("Server error: {0}", ex.Message);
+                }
+            }
+        }
+
+        static void Main(string[] args) {
+            //connection_to_client();
+            receiveDataFromConsumer();
+            
+            
+            //ThreadStart childref_LatinA = new ThreadStart(CallToChildThread);
+            //Thread LatinAmericaThread = new Thread(childref_LatinA);
+            //LatinAmericaThread.Start();
             Console.ReadKey();
             //try
             //{
