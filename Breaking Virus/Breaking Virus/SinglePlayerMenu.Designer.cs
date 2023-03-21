@@ -65,6 +65,7 @@
             this.btn_Covid19.Size = new System.Drawing.Size(524, 688);
             this.btn_Covid19.TabIndex = 1;
             this.btn_Covid19.UseVisualStyleBackColor = false;
+            this.btn_Covid19.Click += new System.EventHandler(this.btn_Covid19_Click);
             // 
             // btn_Dengue
             // 
@@ -81,6 +82,7 @@
             this.btn_Dengue.Size = new System.Drawing.Size(525, 688);
             this.btn_Dengue.TabIndex = 2;
             this.btn_Dengue.UseVisualStyleBackColor = false;
+            this.btn_Dengue.Click += new System.EventHandler(this.btn_Dengue_Click);
             // 
             // btn_Ebola
             // 
@@ -97,6 +99,7 @@
             this.btn_Ebola.Size = new System.Drawing.Size(525, 688);
             this.btn_Ebola.TabIndex = 3;
             this.btn_Ebola.UseVisualStyleBackColor = false;
+            this.btn_Ebola.Click += new System.EventHandler(this.btn_Ebola_Click);
             // 
             // SinglePlayerMenu
             // 

@@ -55,3 +55,4 @@ C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.pdb
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
+C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.Simulacion.resources

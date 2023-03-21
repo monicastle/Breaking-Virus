@@ -4,6 +4,9 @@
     <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Simulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SinglePlayerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
