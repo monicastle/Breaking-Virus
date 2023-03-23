@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "6EhdeIoAI9udkxg7R8DLH/P1WEFrWgY66rtHyoOX6YlBunN5S+oFMU9zaiC/dUeK8nTy6V7YZRNqJ5gxNlEIIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\MONICAVALERIACASTILL\\Desktop\\CONCURRENCIA\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
-=======
-  "dgSpecHash": "RQfAaa/NR7an9oUejO3jXAFJ/OeA9MqnkwtW8d/9ikndwLrUIKpRO4j/Oy6MmqLtu+L3hN7iy1DCH5JCSpMTZQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\NewProyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
->>>>>>> f496e6f6c0bbe9de1cdb15ae0292ce2a72dfe868
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\MONICAVALERIACASTILL\\Desktop\\CONCURRENCIA\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

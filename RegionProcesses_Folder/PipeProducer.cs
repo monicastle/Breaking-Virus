@@ -3,7 +3,79 @@ using System.IO;
 using System.IO.Pipes;
 using System.Text;
 using System.Threading;
-using static Virus;
+
+class Covid19
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Covid19()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+
+class Ebola
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Ebola()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+
+class Dengue
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Dengue()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+
 
 class Producer
 {
@@ -40,14 +112,14 @@ class Producer
     /**
     ** Level of heat resistance should be higher than the heat rate to be able to spread more efectively
     ** same for cold resistance
-    */
+*/
 
     /**
     * Win
     * *_uninfected --> 0
     * *_infected --> 0
     * *_dead --> Total Population  
-    */
+*/
     //Lose _infected > 0 && _uninfected == 0
 
     public int getTotalPopulation() { return this._totalPopulation; }
@@ -91,7 +163,7 @@ class Producer
             {
                 newlyDead = this._infected;
             }
-            // int n = Covid19.
+            //int n = Covid19.
             this._infected -= newlyDead;
             this._dead += newlyDead;
         }
@@ -133,7 +205,7 @@ class Producer
             if(this._points >= _pneededMort)
                 _upgMortalityLvl = true;
         */
-        
+
         //this._totalPopulation -= ;
         Console.WriteLine("Total population: {0}", this._totalPopulation);
         Console.WriteLine("Uninfected: {0}", this._uninfected);
@@ -157,7 +229,7 @@ class Producer
         }
         else if (randomNumber == 2)
         {
-            bola ebola = new Ebola();
+            Ebola ebola = new Ebola();
             Console.WriteLine("Ebola LvlMortality: " + ebola.LvlMortality);
             Console.WriteLine("Ebola LvlSpread: " + ebola.LvlSpread);
         }
@@ -177,7 +249,7 @@ class Producer
                     var data = DateTime.Now.ToString() + " ---> Producer: " + instanceId;
                     Console.WriteLine("Produced: {0}", data);
                     producer.simulation();
-                    var actualData = DateTime.Now.ToString() + "," + producer.getTotalPopulation() + "," + producer.getInfected() + "," + producer.getUninfected() + "," + producer.getDead() + "1";
+                    var actualData = DateTime.Now.ToString() + "," + producer.getTotalPopulation() + "," + producer.getInfected() + "," + producer.getUninfected() + "," + producer.getDead();
                     var buffer = Encoding.UTF8.GetBytes(actualData);
 
                     Monitor.Enter(monitor); // acquire the monitor lock

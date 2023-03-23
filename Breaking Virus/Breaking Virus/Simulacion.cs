@@ -4,96 +4,147 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq.Expressions;
 
 namespace Breaking_Virus
 {
     public partial class Simulacion : Form
     {
+        private IPAddress serverIpAddress;
+        private int serverPort;
+        private Socket clientSocket;
+
+        public void Connect()
+        {
+            // Connect to the server
+            clientSocket.Connect(new IPEndPoint(serverIpAddress, serverPort));
+            Console.WriteLine("Connected to server {0}{1}{2}", serverIpAddress, ":", serverPort);
+
+            // Receive data from the server and display it
+            while (true)
+            {
+                byte[] buffer = new byte[1024];
+                int numBytes = clientSocket.Receive(buffer);
+                string data = Encoding.ASCII.GetString(buffer, 0, numBytes);
+                string[] splitData = data.Split(','); // Split Data
+                validateSendData(splitData);
+                Console.WriteLine("Received data from server: {0}", data);
+            }
+        }
+
         public Simulacion()
         {
             InitializeComponent();
+            this.serverIpAddress = IPAddress.Parse("192.168.1.12"); // Change this to the IP address of the server machine
+            this.serverPort = 12345;
+            this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+            // Connect();
+            Thread receiveThread = new Thread(Connect);
+            receiveThread.Start();
         }
 
-        private void btn_pinNorthAmerica_Click(object sender, EventArgs e)
+        private void UpdateLabelUninfected(string text)
         {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select North America to start your virus?", "Select Region", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
+            if (uninfected_NorthAmerica.InvokeRequired)
             {
-                enableVisuals_Regions();
+                uninfected_NorthAmerica.Invoke((Action)(() => uninfected_NorthAmerica.Text = text));
+            }
+            else
+            {
+                uninfected_NorthAmerica.Text = text;
             }
         }
 
-        private void btn_pinSouthAmerica_Click(object sender, EventArgs e)
+        private void UpdateLabelInfected(string text)
         {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select South America to start your virus?", "Select Region", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
+            if (infected_NorthAmerica.InvokeRequired)
             {
-                enableVisuals_Regions();
+                infected_NorthAmerica.Invoke((Action)(() => infected_NorthAmerica.Text = text));
             }
-
-        }
-
-        private void btn_pinEurope_Click(object sender, EventArgs e)
-        {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Europe to start your virus?", "Select Region", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
+            else
             {
-                enableVisuals_Regions();
+                infected_NorthAmerica.Text = text;
             }
         }
 
-        private void btn_pinAfrica_Click(object sender, EventArgs e)
+        private void UpdateLabelDead(string text)
         {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Africa to start your virus?", "Select Region", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
+            if (dead_NorthAmerica.InvokeRequired)
             {
-                enableVisuals_Regions();
+                dead_NorthAmerica.Invoke((Action)(() => dead_NorthAmerica.Text = text));
+            }
+            else
+            {
+                dead_NorthAmerica.Text = text;
             }
         }
 
-        private void btn_pinAsia_Click(object sender, EventArgs e)
+
+        // Se encarga de saber que proceso acaba de enviar la informacion
+        private void validateSendData(string[] splitData)
         {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Asia to start your virus?", "Select Region", MessageBoxButtons.YesNo);
+            //int lastItem = splitData.Length - 1;
+            string totalPopulation = splitData[1];
+            string uninfected = splitData[3];
+            string infected = splitData[2];
+            string dead = splitData[4];
+            //string processId = splitData[lastItem]; //4
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                enableVisuals_Regions();
-            }
-        }
+            // uninfected_NorthAmerica.Text = uninfected;
+            UpdateLabelUninfected(uninfected);
+            // infected_NorthAmerica.Text = infected;
+            UpdateLabelInfected(infected);
+            // dead_NorthAmerica.Text = dead;
+            UpdateLabelDead(dead);
 
-        private void btn_pinOceania_Click(object sender, EventArgs e)
-        {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Oceania to start your virus?", "Select Region", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                enableVisuals_Regions();
-            }
-        }
-
-        private void enableVisuals_Regions()
-        {
-            // Dejamos de mostrar los botones de Pins de cada region
-            btn_pinNorthAmerica.Visible = false;
-            btn_pinSouthAmerica.Visible = false;
-            btn_pinEurope.Visible = false;
-            btn_pinAfrica.Visible = false;
-            btn_pinAsia.Visible = false;
-            btn_pinOceania.Visible = false;
-            // Mostramos los paneles con la simulacion por region
-            panel_NorthAmerica.Visible = true;
-            panel_SouthAmerica.Visible = true;
-            panel_Europe.Visible = true;
-            panel_Africa.Visible = true;
-            panel_Asia.Visible = true;
-            panel_Oceania.Visible = true;
+            //switch (processId)
+            //{
+            //    case "1":
+            //        // North America
+            //        uninfected_NorthAmerica.Text = uninfected;
+            //        infected_NorthAmerica.Text = infected;
+            //        dead_NorthAmerica.Text = dead;
+            //        break;
+            //    case "2":
+            //        // South America
+            //        uninfected_SouthAmerica.Text = uninfected;
+            //        infected_SouthAmerica.Text = infected;
+            //        dead_SouthAmerica.Text = dead;
+            //        break;
+            //    case "3":
+            //        // Europe
+            //        uninfected_Europe.Text = uninfected;
+            //        infected_Europe.Text = infected;
+            //        dead_Europe.Text = dead;
+            //        break;
+            //    case "4":
+            //        // Asia
+            //        uninfected_Asia.Text = uninfected;
+            //        infected_Asia.Text = infected;
+            //        dead_Asia.Text = dead;
+            //        break;
+            //    case "5":
+            //        // Africa
+            //        uninfected_Africa.Text = uninfected;
+            //        infected_Africa.Text = infected;
+            //        dead_Africa.Text = dead;
+            //        break;
+            //    case "6":
+            //        // Oceania
+            //        uninfected_Oceania.Text = uninfected;
+            //        infected_Oceania.Text = infected;
+            //        dead_Oceania.Text = dead;
+            //        break;
+            //    default:
+            //        // Process id not valid
+            //        break;
+            //}
         }
     }
 }

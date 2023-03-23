@@ -17,6 +17,15 @@ namespace Servers {
         private  int serverPort;
         private  Socket serverSocket;
         private  List<Socket> clientSockets;
+        private  static string _dataValue = "";
+
+        // public string _dataValue{
+        //     set { _dataValue = value; }
+        // }
+
+        public static void setDataValue(string value){
+            _dataValue = value;
+        }
 
         public Server(IPAddress serverIpAddress, int serverPort) {
             this.serverIpAddress = serverIpAddress;
@@ -54,7 +63,7 @@ namespace Servers {
                 // Send data to the client every second
                 while (true) {
                     string data = DateTime.Now.ToString();
-                    byte[] buffer = Encoding.ASCII.GetBytes(data);
+                    byte[] buffer = Encoding.ASCII.GetBytes(_dataValue); //Value from global variable
                     clientSocket.Send(buffer);
                     Thread.Sleep(1000);
                 }
@@ -93,6 +102,8 @@ namespace Servers {
                         Monitor.Enter(monitor); // acquire the monitor lock
                         pipeReader.Read(buffer, 0, buffer.Length);
                         var data = Encoding.UTF8.GetString(buffer).Trim('\0');
+                        // _dataValue =
+                        setDataValue(data.ToString());
                         Console.WriteLine("Received data from consumer: {0}", data);
                         Monitor.Exit(monitor); // release the monitor lock
                     }
@@ -105,9 +116,11 @@ namespace Servers {
 
         static void Main(string[] args) {
             //receiveDataFromConsumer();
+            Thread receiveThread = new Thread(receiveDataFromConsumer);
+            receiveThread.Start();
 
             // Start the server on a specific IP address and port
-            IPAddress ipAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
+            IPAddress ipAddress = IPAddress.Parse("192.168.1.12"); // Change this to the IP address of the server machine
             Server server = new Server(ipAddress, 12345);
             server.Start();
 

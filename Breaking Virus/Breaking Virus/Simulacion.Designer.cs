@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.btn_pinNorthAmerica = new System.Windows.Forms.Button();
-            this.btn_pinEurope = new System.Windows.Forms.Button();
-            this.btn_pinAfrica = new System.Windows.Forms.Button();
-            this.btn_pinAsia = new System.Windows.Forms.Button();
-            this.btn_pinOceania = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,7 +81,8 @@
             this.Tlabel_Infected_NA = new System.Windows.Forms.Label();
             this.Tlabel_Uninfected_NA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_pinSouthAmerica = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_Asia.SuspendLayout();
             this.panel_Africa.SuspendLayout();
             this.panel_Europe.SuspendLayout();
@@ -97,126 +91,12 @@
             this.panel_NorthAmerica.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 4;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(23, 1060);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(378, 78);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "DISEASE";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(22, 1008);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(379, 36);
             this.progressBar1.TabIndex = 2;
-            // 
-            // btn_pinNorthAmerica
-            // 
-            this.btn_pinNorthAmerica.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinNorthAmerica.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinNorthAmerica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinNorthAmerica.FlatAppearance.BorderSize = 0;
-            this.btn_pinNorthAmerica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinNorthAmerica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinNorthAmerica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinNorthAmerica.Location = new System.Drawing.Point(287, 405);
-            this.btn_pinNorthAmerica.Name = "btn_pinNorthAmerica";
-            this.btn_pinNorthAmerica.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinNorthAmerica.TabIndex = 3;
-            this.btn_pinNorthAmerica.UseVisualStyleBackColor = false;
-            this.btn_pinNorthAmerica.Click += new System.EventHandler(this.btn_pinNorthAmerica_Click);
-            // 
-            // btn_pinEurope
-            // 
-            this.btn_pinEurope.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinEurope.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinEurope.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinEurope.FlatAppearance.BorderSize = 0;
-            this.btn_pinEurope.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinEurope.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinEurope.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinEurope.Location = new System.Drawing.Point(858, 332);
-            this.btn_pinEurope.Name = "btn_pinEurope";
-            this.btn_pinEurope.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinEurope.TabIndex = 4;
-            this.btn_pinEurope.UseVisualStyleBackColor = false;
-            this.btn_pinEurope.Click += new System.EventHandler(this.btn_pinEurope_Click);
-            // 
-            // btn_pinAfrica
-            // 
-            this.btn_pinAfrica.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAfrica.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinAfrica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinAfrica.FlatAppearance.BorderSize = 0;
-            this.btn_pinAfrica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAfrica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAfrica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinAfrica.Location = new System.Drawing.Point(995, 630);
-            this.btn_pinAfrica.Name = "btn_pinAfrica";
-            this.btn_pinAfrica.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinAfrica.TabIndex = 5;
-            this.btn_pinAfrica.UseVisualStyleBackColor = false;
-            this.btn_pinAfrica.Click += new System.EventHandler(this.btn_pinAfrica_Click);
-            // 
-            // btn_pinAsia
-            // 
-            this.btn_pinAsia.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAsia.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinAsia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinAsia.FlatAppearance.BorderSize = 0;
-            this.btn_pinAsia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAsia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinAsia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinAsia.Location = new System.Drawing.Point(1445, 456);
-            this.btn_pinAsia.Name = "btn_pinAsia";
-            this.btn_pinAsia.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinAsia.TabIndex = 6;
-            this.btn_pinAsia.UseVisualStyleBackColor = false;
-            this.btn_pinAsia.Click += new System.EventHandler(this.btn_pinAsia_Click);
-            // 
-            // btn_pinOceania
-            // 
-            this.btn_pinOceania.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinOceania.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinOceania.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinOceania.FlatAppearance.BorderSize = 0;
-            this.btn_pinOceania.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinOceania.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinOceania.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinOceania.Location = new System.Drawing.Point(1636, 812);
-            this.btn_pinOceania.Name = "btn_pinOceania";
-            this.btn_pinOceania.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinOceania.TabIndex = 7;
-            this.btn_pinOceania.UseVisualStyleBackColor = false;
-            this.btn_pinOceania.Click += new System.EventHandler(this.btn_pinOceania_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 4;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1502, 1060);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(378, 78);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "WORLD";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // progressBar2
             // 
@@ -261,7 +141,6 @@
             this.panel_Asia.Name = "panel_Asia";
             this.panel_Asia.Size = new System.Drawing.Size(244, 143);
             this.panel_Asia.TabIndex = 13;
-            this.panel_Asia.Visible = false;
             // 
             // titleAsia
             // 
@@ -357,7 +236,6 @@
             this.panel_Africa.Name = "panel_Africa";
             this.panel_Africa.Size = new System.Drawing.Size(244, 143);
             this.panel_Africa.TabIndex = 14;
-            this.panel_Africa.Visible = false;
             // 
             // titleAfrica
             // 
@@ -453,7 +331,6 @@
             this.panel_Europe.Name = "panel_Europe";
             this.panel_Europe.Size = new System.Drawing.Size(244, 143);
             this.panel_Europe.TabIndex = 17;
-            this.panel_Europe.Visible = false;
             // 
             // titleEurope
             // 
@@ -549,7 +426,6 @@
             this.panel_Oceania.Name = "panel_Oceania";
             this.panel_Oceania.Size = new System.Drawing.Size(244, 143);
             this.panel_Oceania.TabIndex = 18;
-            this.panel_Oceania.Visible = false;
             // 
             // titleOceania
             // 
@@ -645,7 +521,6 @@
             this.panel_SouthAmerica.Name = "panel_SouthAmerica";
             this.panel_SouthAmerica.Size = new System.Drawing.Size(244, 143);
             this.panel_SouthAmerica.TabIndex = 19;
-            this.panel_SouthAmerica.Visible = false;
             // 
             // dead_SouthAmerica
             // 
@@ -741,7 +616,6 @@
             this.panel_NorthAmerica.Name = "panel_NorthAmerica";
             this.panel_NorthAmerica.Size = new System.Drawing.Size(244, 143);
             this.panel_NorthAmerica.TabIndex = 14;
-            this.panel_NorthAmerica.Visible = false;
             // 
             // titleNorthAmerica
             // 
@@ -834,21 +708,39 @@
             this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 20;
             // 
-            // btn_pinSouthAmerica
+            // button2
             // 
-            this.btn_pinSouthAmerica.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinSouthAmerica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinSouthAmerica.FlatAppearance.BorderSize = 0;
-            this.btn_pinSouthAmerica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinSouthAmerica.Location = new System.Drawing.Point(557, 718);
-            this.btn_pinSouthAmerica.Name = "btn_pinSouthAmerica";
-            this.btn_pinSouthAmerica.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinSouthAmerica.TabIndex = 8;
-            this.btn_pinSouthAmerica.UseVisualStyleBackColor = false;
-            this.btn_pinSouthAmerica.Click += new System.EventHandler(this.btn_pinSouthAmerica_Click);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 4;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1502, 1060);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(378, 78);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "WORLD";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 4;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(23, 1060);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(378, 78);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "DISEASE";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Simulacion
             // 
@@ -868,14 +760,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_pinOceania);
-            this.Controls.Add(this.btn_pinAsia);
-            this.Controls.Add(this.btn_pinAfrica);
-            this.Controls.Add(this.btn_pinEurope);
-            this.Controls.Add(this.btn_pinNorthAmerica);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_pinSouthAmerica);
             this.DoubleBuffered = true;
             this.Name = "Simulacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -898,15 +784,7 @@
         }
 
         #endregion
-
-        private Button button1;
         private ProgressBar progressBar1;
-        private Button btn_pinNorthAmerica;
-        private Button btn_pinEurope;
-        private Button btn_pinAfrica;
-        private Button btn_pinAsia;
-        private Button btn_pinOceania;
-        private Button button2;
         private ProgressBar progressBar2;
         private Label label1;
         private Label label2;
@@ -959,6 +837,7 @@
         private Label Tlabel_Infected_NA;
         private Label Tlabel_Uninfected_NA;
         private Label label3;
-        private Button btn_pinSouthAmerica;
+        private Button button2;
+        private Button button1;
     }
 }
