@@ -79,8 +79,8 @@ class Producer{
             this._upgPoints += newlyInfected; // ! Why is this +newlyInfected
         }
 
-        if (this._infected > this._uninfected / 4){ //Dead increment, if more than 1/4 of the uninfected get infected
-            int newlyDead = (int)(this._infected * _lvlmortality); // ! Getting stuck if newlydead < 1
+        if (this._infected + this._dead > this._uninfected / 4){ //Dead increment, if more than 1/4 of the uninfected get infected
+            int newlyDead = (int)Math.Ceiling((this._infected * _lvlmortality)); // ! Getting stuck if newlydead < 1
             Console.WriteLine("newlydead: {0}", newlyDead);
             if (newlyDead > this._infected){
                 newlyDead = this._infected;
@@ -95,7 +95,7 @@ class Producer{
             this._contDays++;
             if (this._contDays > 6)
             { //percentage _curedFund * variableX
-                int cured = (int)((this._infected / 2) * _Curefund); //amount of people cured
+                int cured = (int)( ( (this._infected / 2) * _Curefund ) /4 ); //amount of people cured
                 this._uninfected += cured;
                 this._infected -= cured;
             }
