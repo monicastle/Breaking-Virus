@@ -10,40 +10,75 @@ using System.IO;
 using System.IO.Pipes;
 
 namespace Servers {
-    class Program {
+    class Server {
 
         static object monitor = new object();
+        private  IPAddress serverIpAddress;
+        private  int serverPort;
+        private  Socket serverSocket;
+        private  List<Socket> clientSockets;
 
-        public static void connection_to_client() {
+        public Server(IPAddress serverIpAddress, int serverPort) {
+            this.serverIpAddress = serverIpAddress;
+            this.serverPort = serverPort;
+            this.serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            this.clientSockets = new List<Socket>();
+        }
+
+        public void Start() {
+            // Bind the server socket to the specified IP address and port
+            serverSocket.Bind(new IPEndPoint(serverIpAddress, serverPort));
+            Console.WriteLine("Server started on {0}{1}{2}", serverIpAddress, ":", serverPort);
+
+            // Listen for incoming connections
+            serverSocket.Listen(10);
+
+            // Accept client connections and start a new thread to handle each client
+            while (true) {
+                Socket clientSocket = serverSocket.Accept();
+                Console.WriteLine("Accepted client connection from {0}", clientSocket.RemoteEndPoint);
+
+                lock (clientSockets) {
+                    // Add the client socket to the list of connected clients
+                    clientSockets.Add(clientSocket);
+                }
+
+                // Start a new thread to handle the client
+                Thread clientThread = new Thread(() => HandleClient(clientSocket));
+                clientThread.Start();
+            }
+        }
+
+        private void HandleClient(Socket clientSocket) {
             try {
-                IPAddress ipAd = IPAddress.Parse("192.168.5.185"); //Change IP moment to run program
-                TcpListener listener = new TcpListener(ipAd, 8001);
-                listener.Start();
-                Console.WriteLine("The server is running at port 8001...");
-                Console.WriteLine("The local End point is :" + listener.LocalEndpoint);
-                Console.WriteLine("Waiting for a connection.....");
-                TcpClient client = listener.AcceptTcpClient();
-
-                //---get the incoming data through a network stream---
-                NetworkStream nwStream = client.GetStream();
-                byte[] buffer = new byte[client.ReceiveBufferSize];
-
-                //---read incoming stream---
-                int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-
-                //---convert the data received into a string---
-                string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                Console.WriteLine("Received : " + dataReceived);
-
-                //---write back the text to the client---
-                Console.WriteLine("Sending back : " + dataReceived);
-                nwStream.Write(buffer, 0, bytesRead);
-                client.Close();
-                listener.Stop();
+                // Send data to the client every second
+                while (true) {
+                    string data = DateTime.Now.ToString();
+                    byte[] buffer = Encoding.ASCII.GetBytes(data);
+                    clientSocket.Send(buffer);
+                    Thread.Sleep(1000);
+                }
             }
-            catch (Exception e) {
-                Console.WriteLine("Error..... " + e.StackTrace);
+            catch (SocketException) {
+                // The client has disconnected, remove the socket from the list of connected clients
+                Console.WriteLine("Client {0}{1}", clientSocket.RemoteEndPoint, "disconnected");
+                lock (clientSockets) {
+                    clientSockets.Remove(clientSocket);
+                }
             }
+        }
+
+        public void Stop() {
+            // Close all connected client sockets
+            lock (clientSockets) {
+                foreach (Socket clientSocket in clientSockets) {
+                    clientSocket.Close();
+                }
+                clientSockets.Clear();
+            }
+
+            // Close the server socket
+            serverSocket.Close();
         }
 
         public static void receiveDataFromConsumer() {
@@ -69,12 +104,14 @@ namespace Servers {
         }
 
         static void Main(string[] args) {
-            //connection_to_client();
-            receiveDataFromConsumer();
-          
-            //Console.ReadKey();
-     
-            Console.ReadLine();
+            //receiveDataFromConsumer();
+
+            // Start the server on a specific IP address and port
+            IPAddress ipAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
+            Server server = new Server(ipAddress, 12345);
+            server.Start();
+
+            //Console.ReadLine();
         }
     }
 }

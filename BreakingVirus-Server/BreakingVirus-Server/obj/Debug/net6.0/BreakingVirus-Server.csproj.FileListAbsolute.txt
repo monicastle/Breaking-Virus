@@ -43,3 +43,18 @@ C:\Users\chand\OneDrive\Desktop\Breaking-Virus\BreakingVirus-Server\BreakingViru
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.pdb
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.genruntimeconfig.cache
 C:\Users\chand\OneDrive\Desktop\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\ref\BreakingVirus-Server.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.exe
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.deps.json
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.runtimeconfig.json
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\bin\Debug\net6.0\BreakingVirus-Server.pdb
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.csproj.AssemblyReference.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.AssemblyInfoInputs.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.AssemblyInfo.cs
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.csproj.CoreCompileInputs.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\refint\BreakingVirus-Server.dll
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.pdb
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\BreakingVirus-Server.genruntimeconfig.cache
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\BreakingVirus-Server\BreakingVirus-Server\obj\Debug\net6.0\ref\BreakingVirus-Server.dll

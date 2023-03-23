@@ -12,112 +12,33 @@ namespace Breaking_Virus
 {
     public partial class MainMenu : Form
     {
+        private IPAddress serverIpAddress;
+        private int serverPort;
+        private Socket clientSocket;
 
-        public static void CallToChildThread() {
+        public void Connect() {
+            // Connect to the server
+            clientSocket.Connect(new IPEndPoint(serverIpAddress, serverPort));
+            Console.WriteLine("Connected to server {0}{1}{2}", serverIpAddress, ":", serverPort);
 
-            int population = 660000000; //660 million
-            int healthy = 0, infected = 0, dead = 0;
-
-
-
-            try {
-            Console.WriteLine("Lating Ametica thread starts");
-
-            //doing some work like
-            connect_to_server();
-            //the thread is paused for 5000 milliseconds
-            //int sleepfor = 5000;
-            //Console.WriteLine("Child Thread Paused for {0} seconds", sleepfor / 1000);
-            //Thread.Sleep(sleepfor);
-            Console.WriteLine("Task finished now closing thread");
-            }
-            catch (ThreadAbortException e) {
-                Console.WriteLine("Thread Abort Exception");
-            }
-            finally {
-                Console.WriteLine("Couldn't catch the Thread Exception");
-            }
-
-        }
-
-        public static void connect_to_server() {
-            try {
-                string SERVER_IP = "192.168.5.185"; //"192.168.5.185"  192.168.0.12
-                int PORT_NO = 8001;
-                //while (true)
-                //{
-                TcpClient client = new TcpClient(SERVER_IP, PORT_NO);
-                Console.WriteLine("Connecting.....");
-                NetworkStream nwStream = client.GetStream();
-                Console.WriteLine("Connected");
-                Console.Write("Enter the string to be transmitted : ");
-                String textToSend = Console.ReadLine();
-                byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(textToSend);
-                //---send the text---
-                Console.WriteLine("Sending : " + textToSend);
-                nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-
-                //---read back the text---
-                byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-                int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-                Console.WriteLine("Received : " + Encoding.ASCII.GetString(bytesToRead, 0, bytesRead));
-                Console.ReadLine();
-                client.Close();
-                //}
-            }
-            catch (Exception e) {
-                Console.WriteLine("Error..... " + e.StackTrace);
+            // Receive data from the server and display it
+            while (true) {
+                byte[] buffer = new byte[1024];
+                int numBytes = clientSocket.Receive(buffer);
+                string data = Encoding.ASCII.GetString(buffer, 0, numBytes);
+                Console.WriteLine("Received data from server: {0}", data);
             }
         }
 
-
-        public MainMenu(){
+        public MainMenu() {
             InitializeComponent();
+            this.serverIpAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
+            this.serverPort = 12345;
+            this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            // INICIO
-            // Create the token source.
-            //CancellationTokenSource tokenSource = new();
-            ThreadStart childref_LatinA = new ThreadStart(CallToChildThread);
-            Thread LatinAmericaThread = new Thread(childref_LatinA);
-            //LatinAmericaThread = new(
-            //        () => LongRunningOperation(tokenSource.Token)
-            //    );
+            Connect();
 
-            //loop to keep starting a new task for client
-            bool question = true;
-            while (question) {
-                Console.WriteLine("Thread Status 1= {0}", LatinAmericaThread.IsAlive);
-                LatinAmericaThread.Start();
-                Console.WriteLine("Thread Status 2= {0}", LatinAmericaThread.IsAlive);
 
-                //tokenSource.Cancel();
-                //LatinAmericaThread.Join();
-                //Console.WriteLine("Cancellation set in token source...");
-                // Cancellation should have happened, so call Dispose.
-                //tokenSource.Dispose();
-                //Thread.Sleep(1500);
-
-                //stop the main thread for some time
-                //Thread.Sleep(2000);
-                //after doing task abort
-                //LatinAmericaThread.Suspend();
-                //LatinAmericaThread.Abort();
-                Console.WriteLine("Thread Status 3= {0}", LatinAmericaThread.IsAlive);
-                Console.WriteLine("Wanna start another client: true or false");
-                string answer = Console.ReadLine() + "";
-                question = (answer.Equals("T")) ? true : false;
-            }
-
-            // FINAL
-        }
-
-        void LongRunningOperation(CancellationToken token)
-        {
-            while (!token.IsCancellationRequested)
-            { // Check if the caller requested cancellation. 
-                Console.WriteLine("I'm running");
-                Thread.Sleep(500);
-            }
         }
 
         private void btn_Singleplayer_Click(object sender, EventArgs e)
