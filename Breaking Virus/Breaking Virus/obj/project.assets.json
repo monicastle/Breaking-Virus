@@ -14,11 +14,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\MONICAVALERIACASTILL\\Desktop\\CONCURRENCIA\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
       "projectName": "Breaking Virus",
       "projectPath": "C:\\Users\\MONICAVALERIACASTILL\\Desktop\\CONCURRENCIA\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
       "packagesPath": "C:\\Users\\MONICAVALERIACASTILL\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MONICAVALERIACASTILL\\Desktop\\CONCURRENCIA\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\NewProyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
+      "projectName": "Breaking Virus",
+      "projectPath": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\NewProyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\Breaking Virus.csproj",
+      "packagesPath": "C:\\Users\\tyler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tyler\\Documents\\UNITEC\\2023\\UNITEC PRIMER PERIODO 2022\\Concurencia\\NewProyecto\\Breaking-Virus\\Breaking Virus\\Breaking Virus\\obj\\",
+>>>>>>> f496e6f6c0bbe9de1cdb15ae0292ce2a72dfe868
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,7 +78,11 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+>>>>>>> f496e6f6c0bbe9de1cdb15ae0292ce2a72dfe868
       }
     }
   }
