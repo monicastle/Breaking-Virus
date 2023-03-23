@@ -3,8 +3,10 @@ using System.IO;
 using System.IO.Pipes;
 using System.Text;
 using System.Threading;
+using static Virus;
 
-class Producer{
+class Producer
+{
     static object monitor = new object();
 
     //initialize variables
@@ -35,20 +37,20 @@ class Producer{
     public double lvlVirusHeatResistance = 0.0;
     public double lvlVirusColdResistance = 0.0;
 
-    /**
-    ** Level of heat resistance should be higher than the heat rate to be able to spread more efectively
-    ** same for cold resistance
-    */
+/**
+** Level of heat resistance should be higher than the heat rate to be able to spread more efectively
+** same for cold resistance
+*/
 
-    /**
-    * Win
-    * *_uninfected --> 0
-    * *_infected --> 0
-    * *_dead --> Total Population  
-    */
-    //Lose _infected > 0 && _uninfected == 0
+/**
+* Win
+* *_uninfected --> 0
+* *_infected --> 0
+* *_dead --> Total Population  
+*/
+//Lose _infected > 0 && _uninfected == 0
 
-    public int getTotalPopulation() { return this._totalPopulation; }
+public int getTotalPopulation() { return this._totalPopulation; }
     public int getInfected() { return this._infected; }
     public int getUninfected() { return this._uninfected; }
     public int getDead() { return this._dead; }
@@ -67,11 +69,13 @@ class Producer{
     {
         // Simulate the spread of the disease
         // formula for modeling a virus spread is R0 = (transmission rate per contact) x (duration of infectivity) x (number of contacts per unit time)
-        if (this._uninfected > 0){//Infected increment
-            //int newlyInfected = (int)((this._infected * _lvlspread) + 1); // gotta fix this probability
+        if (this._uninfected > 0)
+        {//Infected increment
+         //int newlyInfected = (int)((this._infected * _lvlspread) + 1); // gotta fix this probability
             int newlyInfected = (int)((this._infected * this._lvltransmissionRate * this._durationOfInfectivity * this._numContactsPerDay));
             Console.WriteLine("newlyinfected: {0}", newlyInfected);
-            if (newlyInfected > this._uninfected){
+            if (newlyInfected > this._uninfected)
+            {
                 newlyInfected = this._uninfected;
             }
             this._uninfected -= newlyInfected;
@@ -79,14 +83,16 @@ class Producer{
             this._upgPoints += newlyInfected; // ! Why is this +newlyInfected
         }
 
-        if (this._infected + this._dead > this._uninfected / 4){ //Dead increment, if more than 1/4 of the uninfected get infected
+        if (this._infected + this._dead > this._uninfected / 4)
+        { //Dead increment, if more than 1/4 of the uninfected get infected
             int newlyDead = (int)Math.Ceiling((this._infected * _lvlmortality)); // ! Getting stuck if newlydead < 1
             Console.WriteLine("newlydead: {0}", newlyDead);
-            if (newlyDead > this._infected){
+            if (newlyDead > this._infected)
+            {
                 newlyDead = this._infected;
             }
-
-            this._infected -= newlyDead;
+            int n = Covid19.
+                this._infected -= newlyDead;
             this._dead += newlyDead;
         }
 
@@ -95,7 +101,7 @@ class Producer{
             this._contDays++;
             if (this._contDays > 6)
             { //percentage _curedFund * variableX
-                int cured = (int)( ( (this._infected / 2) * _Curefund ) /4 ); //amount of people cured
+                int cured = (int)(((this._infected / 2) * _Curefund) / 4); //amount of people cured
                 this._uninfected += cured;
                 this._infected -= cured;
             }
@@ -108,14 +114,14 @@ class Producer{
             this._pneededMort += 2;
             if(this._points >= _pneededMort)
                 _upgMortalityLvl = true;
-        
+    
             **esto iria dentro del boton cuando le de upg a spread
             this._lvlmortality += 0.01;
             this._points -= _pneededSpread;
             this._pneededSpread += 2;
             if(this._points >= _pneededSpread)
                 _upgSpreadLvl = true;// y aqui se enable el boton
-        
+    
             **esto si iria dentro de aca
             if ( this._cont4points > (this._totalPopulation / 10)/2 ) { //aqui se ve lo del 5%
                 this._points += 1;
@@ -127,7 +133,7 @@ class Producer{
             if(this._points >= _pneededMort)
                 _upgMortalityLvl = true;
         */
-
+        
         //this._totalPopulation -= ;
         Console.WriteLine("Total population: {0}", this._totalPopulation);
         Console.WriteLine("Uninfected: {0}", this._uninfected);
@@ -135,12 +141,36 @@ class Producer{
         Console.WriteLine("Dead: {0}", this._dead);
     }
 
-    static void Main(string[] args){
+    static void Main(string[] args)
+    {
         string pipeName = "myPipe";
         var instanceId = args.Length > 0 ? args[0] : "1"; // Use the first argument as instance ID, or default to "1"
         Producer producer = new Producer();
-        while (true){
-            try{
+        Random random = new Random();
+        int randomNumber = random.Next(1, 4);
+        if (randomNumber == 1)
+        {
+            Covid19 covid = new Covid19();
+            Console.WriteLine("Covid19 LvlMortality: " + covid.LvlMortality);
+            Console.WriteLine("Covid19 LvlSpread: " + covid.LvlSpread);
+
+        }
+        else if (randomNumber == 2)
+        {
+            bola ebola = new Ebola();
+            Console.WriteLine("Ebola LvlMortality: " + ebola.LvlMortality);
+            Console.WriteLine("Ebola LvlSpread: " + ebola.LvlSpread);
+        }
+        else
+        {
+            Dengue dengue = new Dengue();
+            Console.WriteLine("Dengue LvlMortality: " + dengue.LvlMortality);
+            Console.WriteLine("Dengue LvlSpread: " + dengue.LvlSpread);
+        }
+        while (true)
+        {
+            try
+            {
                 using (var pipeWriter = new NamedPipeClientStream(".", pipeName, PipeDirection.Out))
                 {
                     pipeWriter.Connect();
@@ -157,7 +187,8 @@ class Producer{
                 }
                 Thread.Sleep(1000);
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 Console.WriteLine("Producer error: {0}", ex.Message);
             }
         }
