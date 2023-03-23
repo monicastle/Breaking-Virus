@@ -35,7 +35,6 @@
             this.btn_pinAfrica = new System.Windows.Forms.Button();
             this.btn_pinAsia = new System.Windows.Forms.Button();
             this.btn_pinOceania = new System.Windows.Forms.Button();
-            this.btn_pinSouthAmerica = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -89,22 +88,13 @@
             this.Tlabel_Infected_NA = new System.Windows.Forms.Label();
             this.Tlabel_Uninfected_NA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.conexion_LongBeachUSA_Chile = new System.Windows.Forms.PictureBox();
-            this.conexion_SouthAfrica_Australia = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btn_pinSouthAmerica = new System.Windows.Forms.Button();
             this.panel_Asia.SuspendLayout();
             this.panel_Africa.SuspendLayout();
             this.panel_Europe.SuspendLayout();
             this.panel_Oceania.SuspendLayout();
             this.panel_SouthAmerica.SuspendLayout();
             this.panel_NorthAmerica.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.conexion_LongBeachUSA_Chile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conexion_SouthAfrica_Australia)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -210,22 +200,6 @@
             this.btn_pinOceania.TabIndex = 7;
             this.btn_pinOceania.UseVisualStyleBackColor = false;
             this.btn_pinOceania.Click += new System.EventHandler(this.btn_pinOceania_Click);
-            // 
-            // btn_pinSouthAmerica
-            // 
-            this.btn_pinSouthAmerica.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
-            this.btn_pinSouthAmerica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_pinSouthAmerica.FlatAppearance.BorderSize = 0;
-            this.btn_pinSouthAmerica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_pinSouthAmerica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pinSouthAmerica.Location = new System.Drawing.Point(42, 279);
-            this.btn_pinSouthAmerica.Name = "btn_pinSouthAmerica";
-            this.btn_pinSouthAmerica.Size = new System.Drawing.Size(58, 82);
-            this.btn_pinSouthAmerica.TabIndex = 8;
-            this.btn_pinSouthAmerica.UseVisualStyleBackColor = false;
-            this.btn_pinSouthAmerica.Click += new System.EventHandler(this.btn_pinSouthAmerica_Click);
             // 
             // button2
             // 
@@ -860,69 +834,21 @@
             this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 20;
             // 
-            // conexion_LongBeachUSA_Chile
+            // btn_pinSouthAmerica
             // 
-            this.conexion_LongBeachUSA_Chile.BackColor = System.Drawing.Color.Transparent;
-            this.conexion_LongBeachUSA_Chile.BackgroundImage = global::Breaking_Virus.Resource1.puerto_USA_Chile;
-            this.conexion_LongBeachUSA_Chile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.conexion_LongBeachUSA_Chile.Location = new System.Drawing.Point(185, 485);
-            this.conexion_LongBeachUSA_Chile.Name = "conexion_LongBeachUSA_Chile";
-            this.conexion_LongBeachUSA_Chile.Size = new System.Drawing.Size(310, 552);
-            this.conexion_LongBeachUSA_Chile.TabIndex = 21;
-            this.conexion_LongBeachUSA_Chile.TabStop = false;
-            // 
-            // conexion_SouthAfrica_Australia
-            // 
-            this.conexion_SouthAfrica_Australia.BackColor = System.Drawing.Color.Transparent;
-            this.conexion_SouthAfrica_Australia.BackgroundImage = global::Breaking_Virus.Resource1.puerto_Sudafrica_Australia;
-            this.conexion_SouthAfrica_Australia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.conexion_SouthAfrica_Australia.Location = new System.Drawing.Point(1036, 874);
-            this.conexion_SouthAfrica_Australia.Name = "conexion_SouthAfrica_Australia";
-            this.conexion_SouthAfrica_Australia.Size = new System.Drawing.Size(679, 53);
-            this.conexion_SouthAfrica_Australia.TabIndex = 23;
-            this.conexion_SouthAfrica_Australia.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Breaking_Virus.Resource1.puerto_Chile_NewYork;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btn_pinSouthAmerica);
-            this.panel1.Location = new System.Drawing.Point(512, 440);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 567);
-            this.panel1.TabIndex = 25;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Breaking_Virus.Resource1.puerto_Chile_Sudafrica;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(529, 886);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(460, 140);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(1626, 405);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(1636, 375);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 25);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "label5";
+            this.btn_pinSouthAmerica.BackColor = System.Drawing.Color.Transparent;
+            this.btn_pinSouthAmerica.BackgroundImage = global::Breaking_Virus.Resource1.LocationPins;
+            this.btn_pinSouthAmerica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_pinSouthAmerica.FlatAppearance.BorderSize = 0;
+            this.btn_pinSouthAmerica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_pinSouthAmerica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_pinSouthAmerica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pinSouthAmerica.Location = new System.Drawing.Point(557, 718);
+            this.btn_pinSouthAmerica.Name = "btn_pinSouthAmerica";
+            this.btn_pinSouthAmerica.Size = new System.Drawing.Size(58, 82);
+            this.btn_pinSouthAmerica.TabIndex = 8;
+            this.btn_pinSouthAmerica.UseVisualStyleBackColor = false;
+            this.btn_pinSouthAmerica.Click += new System.EventHandler(this.btn_pinSouthAmerica_Click);
             // 
             // Simulacion
             // 
@@ -931,8 +857,6 @@
             this.BackgroundImage = global::Breaking_Virus.Resource1.MapSimulation;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1160);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel_SouthAmerica);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel_NorthAmerica);
@@ -951,10 +875,7 @@
             this.Controls.Add(this.btn_pinNorthAmerica);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.conexion_LongBeachUSA_Chile);
-            this.Controls.Add(this.conexion_SouthAfrica_Australia);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_pinSouthAmerica);
             this.DoubleBuffered = true;
             this.Name = "Simulacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -971,10 +892,6 @@
             this.panel_SouthAmerica.PerformLayout();
             this.panel_NorthAmerica.ResumeLayout(false);
             this.panel_NorthAmerica.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.conexion_LongBeachUSA_Chile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conexion_SouthAfrica_Australia)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -989,7 +906,6 @@
         private Button btn_pinAfrica;
         private Button btn_pinAsia;
         private Button btn_pinOceania;
-        private Button btn_pinSouthAmerica;
         private Button button2;
         private ProgressBar progressBar2;
         private Label label1;
@@ -1043,11 +959,6 @@
         private Label Tlabel_Infected_NA;
         private Label Tlabel_Uninfected_NA;
         private Label label3;
-        private PictureBox conexion_LongBeachUSA_Chile;
-        private PictureBox conexion_SouthAfrica_Australia;
-        private Panel panel1;
-        private PictureBox pictureBox1;
-        private Label label4;
-        private Label label5;
+        private Button btn_pinSouthAmerica;
     }
 }

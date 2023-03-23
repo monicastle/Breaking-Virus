@@ -13,7 +13,6 @@ class Producer
     public int _uninfected = 9999999;
     public int _infected = 1;
     public int _dead = 0;
-
     public int _points = 0;
     public int _upgPoints = 0; //este contador sirve para ir contando que cada 5% se le den puntos 
     public double _lvlmortality = 0.02;//1.00 es el mx sea va subiendo de 0.01 en 0.01
