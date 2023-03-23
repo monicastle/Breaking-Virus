@@ -37,20 +37,20 @@ class Producer
     public double lvlVirusHeatResistance = 0.0;
     public double lvlVirusColdResistance = 0.0;
 
-/**
-** Level of heat resistance should be higher than the heat rate to be able to spread more efectively
-** same for cold resistance
-*/
+    /**
+    ** Level of heat resistance should be higher than the heat rate to be able to spread more efectively
+    ** same for cold resistance
+    */
 
-/**
-* Win
-* *_uninfected --> 0
-* *_infected --> 0
-* *_dead --> Total Population  
-*/
-//Lose _infected > 0 && _uninfected == 0
+    /**
+    * Win
+    * *_uninfected --> 0
+    * *_infected --> 0
+    * *_dead --> Total Population  
+    */
+    //Lose _infected > 0 && _uninfected == 0
 
-public int getTotalPopulation() { return this._totalPopulation; }
+    public int getTotalPopulation() { return this._totalPopulation; }
     public int getInfected() { return this._infected; }
     public int getUninfected() { return this._uninfected; }
     public int getDead() { return this._dead; }
@@ -91,8 +91,8 @@ public int getTotalPopulation() { return this._totalPopulation; }
             {
                 newlyDead = this._infected;
             }
-            int n = Covid19.
-                this._infected -= newlyDead;
+            // int n = Covid19.
+            this._infected -= newlyDead;
             this._dead += newlyDead;
         }
 
@@ -177,7 +177,7 @@ public int getTotalPopulation() { return this._totalPopulation; }
                     var data = DateTime.Now.ToString() + " ---> Producer: " + instanceId;
                     Console.WriteLine("Produced: {0}", data);
                     producer.simulation();
-                    var actualData = DateTime.Now.ToString() + "," + producer.getTotalPopulation() + "," + producer.getInfected() + "," + producer.getUninfected() + "," + producer.getDead();
+                    var actualData = DateTime.Now.ToString() + "," + producer.getTotalPopulation() + "," + producer.getInfected() + "," + producer.getUninfected() + "," + producer.getDead() + "1";
                     var buffer = Encoding.UTF8.GetBytes(actualData);
 
                     Monitor.Enter(monitor); // acquire the monitor lock

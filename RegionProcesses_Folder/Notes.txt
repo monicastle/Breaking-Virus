@@ -1,0 +1,5 @@
+producer.getTotalPopulation() = producer.getUninfected() - startingInfected
+producer.getInfected()
+producer.getDead() --> TotalPopulation
+ID to identify what process is sending the information
+image.png
