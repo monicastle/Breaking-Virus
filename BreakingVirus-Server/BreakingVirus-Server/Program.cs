@@ -120,7 +120,7 @@ namespace Servers {
             receiveThread.Start();
 
             // Start the server on a specific IP address and port
-            IPAddress ipAddress = IPAddress.Parse("192.168.1.12"); // Change this to the IP address of the server machine
+            IPAddress ipAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
             Server server = new Server(ipAddress, 12345);
             server.Start();
 
