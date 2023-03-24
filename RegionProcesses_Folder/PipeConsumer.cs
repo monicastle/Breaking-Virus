@@ -4,16 +4,139 @@ using System.IO.Pipes;
 using System.Text;
 using System.Threading;
 
-class Consumer{
+class Covid19
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Covid19()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+
+class Ebola
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Ebola()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+
+class Dengue
+{
+    public double _lvlmortality;
+    public double _lvlspread;
+
+    public Dengue()
+    {
+        _lvlmortality = 0.02;
+        _lvlspread = 0.10;
+    }
+
+    public double LvlMortality
+    {
+        get { return _lvlmortality; }
+        set { _lvlmortality = value; }
+    }
+
+    public double LvlSpread
+    {
+        get { return _lvlspread; }
+        set { _lvlspread = value; }
+    }
+}
+class Consumer
+{
     static object monitor = new object();
 
-    static void Main(string[] args){
+    static void Main(string[] args)
+    {
         string pipeName = "myPipe";
         string forwardPipeName = "forwardPipe";
 
-        while (true){
-            try{
-                using (var pipeReader = new NamedPipeServerStream(pipeName, PipeDirection.In)){
+        Random random = new Random();
+        int randomNumber = random.Next(1, 4);
+        if (randomNumber == 1)
+        {
+            Covid19 covid = new Covid19();
+            Console.WriteLine("Covid19 LvlMortality: " + covid.LvlMortality);
+            Console.WriteLine("Covid19 LvlSpread: " + covid.LvlSpread);
+
+        }
+        else if (randomNumber == 2)
+        {
+            Ebola ebola = new Ebola();
+            Console.WriteLine("Ebola LvlMortality: " + ebola.LvlMortality);
+            Console.WriteLine("Ebola LvlSpread: " + ebola.LvlSpread);
+        }
+        else
+        {
+            Dengue dengue = new Dengue();
+            Console.WriteLine("Dengue LvlMortality: " + dengue.LvlMortality);
+            Console.WriteLine("Dengue LvlSpread: " + dengue.LvlSpread);
+        }
+
+        // Selection of the Starting Region
+        int randomRegion = random.Next(1, 7);
+        switch (randomRegion)
+        {
+            case "1":
+                // NORTH AMERICA
+                break;
+            case "2":
+                // SOUTH AMERICA
+                break;
+            case "3":
+                // EUROPE
+                break;
+            case "4":
+                // ASIA
+                break;
+            case "5":
+                // FRICA
+                break;
+            case "5":
+                // OCEANIA
+                break;
+            default:
+        }
+
+        while (true)
+        {
+            try
+            {
+                using (var pipeReader = new NamedPipeServerStream(pipeName, PipeDirection.In))
+                {
                     pipeReader.WaitForConnection();
                     var buffer = new byte[1024];
 
@@ -25,14 +148,16 @@ class Consumer{
 
 
                     // Forward data to server process
-                    using (var forwardPipe = new NamedPipeClientStream(".", forwardPipeName, PipeDirection.Out)){
+                    using (var forwardPipe = new NamedPipeClientStream(".", forwardPipeName, PipeDirection.Out))
+                    {
                         forwardPipe.Connect();
                         var forwardBuffer = Encoding.UTF8.GetBytes(data);
                         forwardPipe.Write(forwardBuffer, 0, forwardBuffer.Length);
                     }
                 }
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 Console.WriteLine("Consumer error: {0}", ex.Message);
             }
         }
