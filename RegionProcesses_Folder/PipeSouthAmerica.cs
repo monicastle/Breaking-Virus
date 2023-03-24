@@ -4,7 +4,7 @@ using System.IO.Pipes;
 using System.Text;
 using System.Threading;
 
-class Producer
+class SouthAmerica
 {
     static object monitor = new object();
 
@@ -144,7 +144,7 @@ class Producer
     {
         string pipeName = "myPipe";
         var instanceId = args.Length > 0 ? args[0] : "1"; // Use the first argument as instance ID, or default to "1"
-        Producer producer = new Producer();
+        SouthAmerica processSA = new SouthAmerica();
         while (true)
         {
             try
@@ -154,10 +154,9 @@ class Producer
                     pipeWriter.Connect();
                     var data = DateTime.Now.ToString() + " ---> Producer: " + instanceId;
                     Console.WriteLine("Produced: {0}", data);
-                    producer.simulation();
-                    var actualData = DateTime.Now.ToString() + "," + producer.getTotalPopulation() + "," + producer.getInfected() + "," + producer.getUninfected() + "," + producer.getDead();
+                    processSA.simulation();
+                    var actualData = DateTime.Now.ToString() + "," + processSA.getTotalPopulation() + "," + processSA.getInfected() + "," + processSA.getUninfected() + "," + processSA.getDead();
                     var buffer = Encoding.UTF8.GetBytes(actualData);
-
                     Monitor.Enter(monitor); // acquire the monitor lock
                     pipeWriter.Write(buffer, 0, buffer.Length);
                     Monitor.Pulse(monitor); // notify the consumer that data is available

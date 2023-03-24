@@ -75,7 +75,7 @@ class Dengue
         set { _lvlspread = value; }
     }
 }
-class Consumer
+class RegionControl
 {
     static object monitor = new object();
 
@@ -110,25 +110,27 @@ class Consumer
         int randomRegion = random.Next(1, 7);
         switch (randomRegion)
         {
-            case "1":
+            case 1:
                 // NORTH AMERICA
                 break;
-            case "2":
+            case 2:
                 // SOUTH AMERICA
                 break;
-            case "3":
+            case 3:
                 // EUROPE
                 break;
-            case "4":
+            case 4:
                 // ASIA
                 break;
-            case "5":
+            case 5:
                 // FRICA
                 break;
-            case "5":
+            case 6:
                 // OCEANIA
                 break;
             default:
+                // MANEJO DE ERRORES
+                break;
         }
 
         while (true)
