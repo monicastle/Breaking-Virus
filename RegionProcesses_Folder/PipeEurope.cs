@@ -4,8 +4,9 @@ using System.IO.Pipes;
 using System.Text;
 using System.Threading;
 
-class Europe
-{
+using System.Diagnostics;
+
+class Europe{
     static object monitor = new object();
 
     //initialize variables
@@ -17,14 +18,14 @@ class Europe
     //upgrade variables
     public int _points = 0;
     public int _upgPoints = 0; //este contador sirve para ir contando que cada 5% se le den puntos 
-    public double _lvlmortality = 0.02;//1.00 es el mx sea va subiendo de 0.01 en 0.01
+    public double _lvlmortality;//1.00 es el mx sea va subiendo de 0.01 en 0.01
     public bool _upgMortalityLvl = false; // !What is this for?
     public bool _upgSpreadLvl = false; // !What is this for?
     public int _pneededMort = 1;//cantidad de puntos que necesita para upgrade mortality lvl
     public int _pneededSpread = 1;//cantidad de puntos que necesita para upgrade spread lvl 
 
     //virus spread variables
-    public double _lvltransmissionRate = 0.01; //1.00 es el max se va subiendo de 0.01 en 0.01
+    public double _lvltransmissionRate; //1.00 es el max se va subiendo de 0.01 en 0.01
     public int _durationOfInfectivity = 14; //representing the number of days an individual remains infectious
     public int _numContactsPerDay = 2; //representing the number of contacts an individual has per day.
     public double _Curefund = 0.34; //infected * _curedFund
@@ -64,8 +65,10 @@ class Europe
     public double getCureFund() { return this._Curefund; }
     public int getContagionDays() { return this._contDays; }
 
-    public void simulation()
-    {
+    public void SetLvlTransmissionRate(double transmissionRate){_lvltransmissionRate = transmissionRate;}
+    public void SetLvlMortality(double mortality){_lvlmortality = mortality;}
+
+    public void simulation(){
         // Simulate the spread of the disease
         // formula for modeling a virus spread is R0 = (transmission rate per contact) x (duration of infectivity) x (number of contacts per unit time)
         if (this._uninfected > 0)
@@ -140,22 +143,27 @@ class Europe
         Console.WriteLine("Dead: {0}", this._dead);
     }
 
-    static void Main(string[] args)
-    {
+    static void Main(string[] args){
+        // Console.WriteLine("Arguments: ");
+        // foreach (string arg in args){
+        //     Console.WriteLine(arg);
+        // }
         string pipeName = "myPipe";
         var instanceId = args.Length > 0 ? args[0] : "1"; // Use the first argument as instance ID, or default to "1"
         Europe processEU = new Europe();
-        while (true)
-        {
-            try
-            {
+        processEU.SetLvlMortality(Double.Parse(args[0]));
+        processEU.SetLvlTransmissionRate(Double.Parse(args[1]));
+        Console.WriteLine("Europe mortalityrate: {0}", processEU.getLevelMortality());
+        Console.WriteLine("Europe spreadrate: {0}", processEU.getLevelSpread());
+        while (true){
+            try{
                 using (var pipeWriter = new NamedPipeClientStream(".", pipeName, PipeDirection.Out))
                 {
                     pipeWriter.Connect();
-                    var data = DateTime.Now.ToString() + " ---> Producer: " + instanceId;
-                    Console.WriteLine("Produced: {0}", data);
+                    string filename_id = Path.GetFileNameWithoutExtension(AppDomain.CurrentDomain.FriendlyName);
+                    // Console.WriteLine("Produced: {0}", data);
                     processEU.simulation();
-                    var actualData = DateTime.Now.ToString() + "," + processEU.getTotalPopulation() + "," + processEU.getInfected() + "," + processEU.getUninfected() + "," + processEU.getDead();
+                    var actualData = DateTime.Now.ToString() + "," + processEU.getTotalPopulation() + "," + processEU.getInfected() + "," + processEU.getUninfected() + "," + processEU.getDead() + "," + filename_id;
                     var buffer = Encoding.UTF8.GetBytes(actualData);
 
                     Monitor.Enter(monitor); // acquire the monitor lock
@@ -165,8 +173,7 @@ class Europe
                 }
                 Thread.Sleep(1000);
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 Console.WriteLine("Producer error: {0}", ex.Message);
             }
         }

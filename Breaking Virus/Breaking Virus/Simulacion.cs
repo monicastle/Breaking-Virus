@@ -40,7 +40,7 @@ namespace Breaking_Virus
         public Simulacion()
         {
             InitializeComponent();
-            this.serverIpAddress = IPAddress.Parse("192.168.0.12"); // Change this to the IP address of the server machine
+            this.serverIpAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
             this.serverPort = 12345;
             this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
@@ -49,102 +49,219 @@ namespace Breaking_Virus
             receiveThread.Start();
         }
 
-        private void UpdateLabelUninfected(string text)
-        {
-            if (uninfected_NorthAmerica.InvokeRequired)
-            {
+        private void UpdateLabelUninfected_NorthAmerica(string text){
+            if (uninfected_NorthAmerica.InvokeRequired){
                 uninfected_NorthAmerica.Invoke((Action)(() => uninfected_NorthAmerica.Text = text));
             }
-            else
-            {
+            else{
                 uninfected_NorthAmerica.Text = text;
             }
         }
 
-        private void UpdateLabelInfected(string text)
-        {
-            if (infected_NorthAmerica.InvokeRequired)
-            {
+        private void UpdateLabelInfected_NorthAmerica(string text){
+            if (infected_NorthAmerica.InvokeRequired){
                 infected_NorthAmerica.Invoke((Action)(() => infected_NorthAmerica.Text = text));
             }
-            else
-            {
+            else{
                 infected_NorthAmerica.Text = text;
             }
         }
 
-        private void UpdateLabelDead(string text)
-        {
-            if (dead_NorthAmerica.InvokeRequired)
-            {
+        private void UpdateLabelDead_NorthAmerica(string text){
+            if (dead_NorthAmerica.InvokeRequired){
                 dead_NorthAmerica.Invoke((Action)(() => dead_NorthAmerica.Text = text));
             }
-            else
-            {
+            else{
                 dead_NorthAmerica.Text = text;
             }
         }
 
+        private void UpdateLabelUninfected_SouthAmerica(string text) {
+            if (uninfected_SouthAmerica.InvokeRequired) {
+                uninfected_SouthAmerica.Invoke((Action)(() => uninfected_SouthAmerica.Text = text));
+            }
+            else {
+                uninfected_SouthAmerica.Text = text;
+            }
+        }
+
+        private void UpdateLabelInfected_SouthAmerica(string text) {
+            if (infected_SouthAmerica.InvokeRequired) {
+                infected_SouthAmerica.Invoke((Action)(() => infected_SouthAmerica.Text = text));
+            }
+            else {
+                infected_SouthAmerica.Text = text;
+            }
+        }
+
+        private void UpdateLabelDead_SouthAmerica(string text) {
+            if (dead_SouthAmerica.InvokeRequired) {
+                dead_SouthAmerica.Invoke((Action)(() => dead_SouthAmerica.Text = text));
+            }
+            else {
+                dead_SouthAmerica.Text = text;
+            }
+        }
+        //--
+        private void UpdateLabelUninfected_Europe(string text) {
+            if (uninfected_Europe.InvokeRequired) {
+                uninfected_Europe.Invoke((Action)(() => uninfected_Europe.Text = text));
+            }
+            else {
+                uninfected_Europe.Text = text;
+            }
+        }
+
+        private void UpdateLabelInfected_Europe(string text) {
+            if (infected_Europe.InvokeRequired) {
+                infected_Europe.Invoke((Action)(() => infected_Europe.Text = text));
+            }
+            else {
+                infected_Europe.Text = text;
+            }
+        }
+
+        private void UpdateLabelDead_Europe(string text) {
+            if (dead_Europe.InvokeRequired) {
+                dead_Europe.Invoke((Action)(() => dead_Europe.Text = text));
+            }
+            else {
+                dead_Europe.Text = text;
+            }
+        }
+        //---
+        private void UpdateLabelUninfected_Asia(string text) {
+            if (uninfected_Asia.InvokeRequired) {
+                uninfected_Asia.Invoke((Action)(() => uninfected_Asia.Text = text));
+            }
+            else {
+                uninfected_Asia.Text = text;
+            }
+        }
+
+        private void UpdateLabelInfected_Asia(string text) {
+            if (infected_Asia.InvokeRequired) {
+                infected_Asia.Invoke((Action)(() => infected_Asia.Text = text));
+            }
+            else {
+                infected_Asia.Text = text;
+            }
+        }
+
+        private void UpdateLabelDead_Asia(string text) {
+            if (dead_Asia.InvokeRequired) {
+                dead_Asia.Invoke((Action)(() => dead_Asia.Text = text));
+            }
+            else {
+                dead_Asia.Text = text;
+            }
+        }
+        //--
+        private void UpdateLabelUninfected_Africa(string text) {
+            if (uninfected_Africa.InvokeRequired) {
+                uninfected_Africa.Invoke((Action)(() => uninfected_Africa.Text = text));
+            }
+            else {
+                uninfected_Africa.Text = text;
+            }
+        }
+
+        private void UpdateLabelInfected_Africa(string text) {
+            if (infected_Africa.InvokeRequired) {
+                infected_Africa.Invoke((Action)(() => infected_Africa.Text = text));
+            }
+            else {
+                infected_Africa.Text = text;
+            }
+        }
+
+        private void UpdateLabelDead_Africa(string text) {
+            if (dead_Africa.InvokeRequired) {
+                dead_Africa.Invoke((Action)(() => dead_Africa.Text = text));
+            }
+            else {
+                dead_Africa.Text = text;
+            }
+        }
+        //--
+        private void UpdateLabelUninfected_Oceania(string text) {
+            if (uninfected_Oceania.InvokeRequired) {
+                uninfected_Oceania.Invoke((Action)(() => uninfected_Oceania.Text = text));
+            }
+            else {
+                uninfected_Oceania.Text = text;
+            }
+        }
+
+        private void UpdateLabelInfected_Oceania(string text) {
+            if (infected_Oceania.InvokeRequired) {
+                infected_Oceania.Invoke((Action)(() => infected_Oceania.Text = text));
+            }
+            else {
+                infected_Oceania.Text = text;
+            }
+        }
+
+        private void UpdateLabelDead_Oceania(string text) {
+            if (dead_Oceania.InvokeRequired) {
+                dead_Oceania.Invoke((Action)(() => dead_Oceania.Text = text));
+            }
+            else {
+                dead_Oceania.Text = text;
+            }
+        }
 
         // Se encarga de saber que proceso acaba de enviar la informacion
         private void validateSendData(string[] splitData)
         {
-            //int lastItem = splitData.Length - 1;
+            int lastItem = splitData.Length - 1;
             string totalPopulation = splitData[1];
-            string uninfected = splitData[3];
             string infected = splitData[2];
+            string uninfected = splitData[3];
             string dead = splitData[4];
-            //string processId = splitData[lastItem]; //4
+            string processId = splitData[lastItem]; //4
 
-            // uninfected_NorthAmerica.Text = uninfected;
-            UpdateLabelUninfected(uninfected);
-            // infected_NorthAmerica.Text = infected;
-            UpdateLabelInfected(infected);
-            // dead_NorthAmerica.Text = dead;
-            UpdateLabelDead(dead);
-
-            //switch (processId)
-            //{
-            //    case "1":
-            //        // North America
-            //        uninfected_NorthAmerica.Text = uninfected;
-            //        infected_NorthAmerica.Text = infected;
-            //        dead_NorthAmerica.Text = dead;
-            //        break;
-            //    case "2":
-            //        // South America
-            //        uninfected_SouthAmerica.Text = uninfected;
-            //        infected_SouthAmerica.Text = infected;
-            //        dead_SouthAmerica.Text = dead;
-            //        break;
-            //    case "3":
-            //        // Europe
-            //        uninfected_Europe.Text = uninfected;
-            //        infected_Europe.Text = infected;
-            //        dead_Europe.Text = dead;
-            //        break;
-            //    case "4":
-            //        // Asia
-            //        uninfected_Asia.Text = uninfected;
-            //        infected_Asia.Text = infected;
-            //        dead_Asia.Text = dead;
-            //        break;
-            //    case "5":
-            //        // Africa
-            //        uninfected_Africa.Text = uninfected;
-            //        infected_Africa.Text = infected;
-            //        dead_Africa.Text = dead;
-            //        break;
-            //    case "6":
-            //        // Oceania
-            //        uninfected_Oceania.Text = uninfected;
-            //        infected_Oceania.Text = infected;
-            //        dead_Oceania.Text = dead;
-            //        break;
-            //    default:
-            //        // Process id not valid
-            //        break;
-            //}
+            switch (processId) {
+                case "PipeNorthAmerica":
+                    // North America
+                    UpdateLabelUninfected_NorthAmerica(uninfected);
+                    UpdateLabelInfected_NorthAmerica(infected);
+                    UpdateLabelDead_NorthAmerica(dead);
+                    break;
+                case "PipeSouthAmerica":
+                    // South America
+                    UpdateLabelUninfected_SouthAmerica(uninfected);
+                    UpdateLabelInfected_SouthAmerica(infected);
+                    UpdateLabelDead_SouthAmerica(dead);
+                    break;
+                case "PipeEurope":
+                    // Europe
+                    UpdateLabelUninfected_Europe(uninfected);
+                    UpdateLabelInfected_Europe(infected);
+                    UpdateLabelDead_Europe(dead);
+                    break;
+                case "PipeAsia":
+                    // Asia
+                    UpdateLabelUninfected_Asia(uninfected);
+                    UpdateLabelInfected_Asia(infected);
+                    UpdateLabelDead_Asia(dead);
+                    break;
+                case "PipeAfrica":
+                    // Africa
+                    UpdateLabelUninfected_Africa(uninfected);
+                    UpdateLabelInfected_Africa(infected);
+                    UpdateLabelDead_Africa(dead);
+                    break;
+                case "PipeOceania":
+                    // Oceania
+                    UpdateLabelUninfected_Oceania(uninfected);
+                    UpdateLabelInfected_Oceania(infected);
+                    UpdateLabelDead_Oceania(dead);
+                    break;
+                default:
+                    // Process id not valid
+                    break;
+            }
         }
     }
 }

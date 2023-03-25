@@ -5,11 +5,40 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-
 using System.IO;
 using System.IO.Pipes;
+using System.Diagnostics;
 
 namespace Servers {
+
+    class ProcessStarters {
+        ProcessStartInfo startInfoRegionControl = new ProcessStartInfo();
+        Process processRegionControl = new Process();
+        public ProcessStarters(string path) {
+            //this.startInfoRegionControl = startInfoRegionControl;
+            this.startInfoRegionControl.FileName = "cmd.exe";
+            this.startInfoRegionControl.Arguments = "/c PipeRegionControl.exe";
+            this.startInfoRegionControl.WorkingDirectory = path;
+            this.startInfoRegionControl.UseShellExecute = true;
+            this.startInfoRegionControl.CreateNoWindow = false;
+            processRegionControl.StartInfo = this.startInfoRegionControl;
+        }
+
+        public void startProcess() {
+            this.processRegionControl.Start();
+        }
+
+        public void waitForExitProcess() {
+            this.processRegionControl.WaitForExit();
+        }
+
+        public Process getProcess() {
+            return this.processRegionControl;
+        }
+
+    }
+
+
     class Server {
 
         static object monitor = new object();
@@ -18,10 +47,6 @@ namespace Servers {
         private  Socket serverSocket;
         private  List<Socket> clientSockets;
         private  static string _dataValue = "";
-
-        // public string _dataValue{
-        //     set { _dataValue = value; }
-        // }
 
         public static void setDataValue(string value){
             _dataValue = value;
@@ -32,6 +57,33 @@ namespace Servers {
             this.serverPort = serverPort;
             this.serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             this.clientSockets = new List<Socket>();
+        }
+        public string RetrievePath() {
+            string path = Directory.GetCurrentDirectory();
+            for (int i = 0; i < 5; i++) {
+                DirectoryInfo parent = Directory.GetParent(path);
+                if (parent != null) {
+                    path = parent.FullName;
+                }
+            }
+
+            //Console.WriteLine("OLD: {0}", path);
+            // Move into the subdirectory
+            Directory.SetCurrentDirectory(path + @"\RegionProcesses_Folder");
+            string newDirectory = Directory.GetCurrentDirectory();
+            //Console.WriteLine("NEW: {0}", newDirectory);
+            return newDirectory;
+        }
+
+        public void StartPrograms() {
+            try {
+                string path = RetrievePath();
+                ProcessStarters pstart = new ProcessStarters(path);
+                pstart.startProcess();
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void Start() {
@@ -46,6 +98,12 @@ namespace Servers {
             while (true) {
                 Socket clientSocket = serverSocket.Accept();
                 Console.WriteLine("Accepted client connection from {0}", clientSocket.RemoteEndPoint);
+                if (clientSocket != null && clientSocket.Connected) {
+                    //Console.WriteLine("Client connected!");
+                    // handle client communication here
+                    Thread receiveThread = new Thread(receiveDataFromConsumer);
+                    receiveThread.Start();
+                }
 
                 lock (clientSockets) {
                     // Add the client socket to the list of connected clients
@@ -70,7 +128,7 @@ namespace Servers {
             }
             catch (SocketException) {
                 // The client has disconnected, remove the socket from the list of connected clients
-                Console.WriteLine("Client {0}{1}", clientSocket.RemoteEndPoint, "disconnected");
+                Console.WriteLine("Client {0}{1}  ", clientSocket.RemoteEndPoint, "   disconnected");
                 lock (clientSockets) {
                     clientSockets.Remove(clientSocket);
                 }
@@ -85,7 +143,6 @@ namespace Servers {
                 }
                 clientSockets.Clear();
             }
-
             // Close the server socket
             serverSocket.Close();
         }
@@ -116,12 +173,11 @@ namespace Servers {
 
         static void Main(string[] args) {
             //receiveDataFromConsumer();
-            Thread receiveThread = new Thread(receiveDataFromConsumer);
-            receiveThread.Start();
-
+            
             // Start the server on a specific IP address and port
             IPAddress ipAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
             Server server = new Server(ipAddress, 12345);
+            server.StartPrograms();
             server.Start();
 
             //Console.ReadLine();
