@@ -43,20 +43,23 @@ class Dengue{
 class RegionControl{
     static object monitor = new object();
     private int _incrementForRegions = 0;
+    List<string> regionsExecuted = new List<string>();
+
 
     public int getIncrementForRegions() { return this._incrementForRegions; }
 
-    public void selectRandomRegion(Random random, String path, double mortality, double spread){
+    public void selectRandomRegion(Random random, String path, double mortality, double spread,string n){
         int randomRegion = random.Next(1, 7);
         switch (randomRegion){
             case 1:
                 // NORTH AMERICA
                 Console.WriteLine("Started NorthAmerica");
-                bool isRunningNA = Process.GetProcessesByName("PipeNorthAmerica").Length > 0;
-                if(!isRunningNA){
+                // bool isRunningNA = Process.GetProcessesByName("NorthAmerica").Length > 0;
+                if (!regionsExecuted.Contains("NorthAmerica")){
+                    regionsExecuted.Add("NorthAmerica");
                     ProcessStartInfo startPipe_NorthAmerica = new ProcessStartInfo();
                     startPipe_NorthAmerica.FileName = "cmd.exe";
-                    startPipe_NorthAmerica.Arguments = "/c PipeNorthAmerica.exe " + mortality + " " + spread;
+                    startPipe_NorthAmerica.Arguments = "/c NorthAmerica.exe " + mortality + " " + spread + " " + n;
                     startPipe_NorthAmerica.WorkingDirectory = path;
                     startPipe_NorthAmerica.UseShellExecute = true;
                     startPipe_NorthAmerica.CreateNoWindow = false;
@@ -69,11 +72,12 @@ class RegionControl{
             case 2:
                 // SOUTH AMERICA
                 Console.WriteLine("Started SouthAmerica");
-                bool isRunningSA = Process.GetProcessesByName("PipeSouthAmerica").Length > 0;
-                if(!isRunningSA){
+                // bool isRunningSA = Process.GetProcessesByName("SouthAmerica").Length > 0;
+                if (!regionsExecuted.Contains("SouthAmerica")){
+                    regionsExecuted.Add("SouthAmerica");
                     ProcessStartInfo startPipe_SouthAmerica = new ProcessStartInfo();
                     startPipe_SouthAmerica.FileName = "cmd.exe";
-                    startPipe_SouthAmerica.Arguments = "/c PipeSouthAmerica.exe " + mortality + " " + spread;
+                    startPipe_SouthAmerica.Arguments = "/c SouthAmerica.exe " + mortality + " " + spread + " " + n;
                     startPipe_SouthAmerica.WorkingDirectory = path;
                     startPipe_SouthAmerica.UseShellExecute = true;
                     startPipe_SouthAmerica.CreateNoWindow = false;
@@ -86,11 +90,12 @@ class RegionControl{
             case 3:
                 // EUROPE
                 Console.WriteLine("Started Europe");
-                bool isRunningEU = Process.GetProcessesByName("PipeEurope").Length > 0;
-                if(!isRunningEU){
+                // bool isRunningEU = Process.GetProcessesByName("Europe").Length > 0;
+                if (!regionsExecuted.Contains("Europe")){
+                    regionsExecuted.Add("Europe");
                     ProcessStartInfo startPipe_Europe = new ProcessStartInfo();
                     startPipe_Europe.FileName = "cmd.exe";
-                    startPipe_Europe.Arguments = "/c PipeEurope.exe " + mortality + " " + spread;
+                    startPipe_Europe.Arguments = "/c Europe.exe " + mortality + " " + spread + " " + n;
                     startPipe_Europe.WorkingDirectory = path;
                     startPipe_Europe.UseShellExecute = true;
                     startPipe_Europe.CreateNoWindow = false;
@@ -103,11 +108,12 @@ class RegionControl{
             case 4:
                 // ASIA
                 Console.WriteLine("Started Asia");
-                bool isRunningAs = Process.GetProcessesByName("PipeAsia").Length > 0;
-                if(!isRunningAs){
+                // bool isRunningAs = Process.GetProcessesByName("Asia").Length > 0;
+                if (!regionsExecuted.Contains("Asia")){
+                    regionsExecuted.Add("Asia");
                     ProcessStartInfo startPipe_Asia = new ProcessStartInfo();
                     startPipe_Asia.FileName = "cmd.exe";
-                    startPipe_Asia.Arguments = "/c PipeAsia.exe " + mortality + " " + spread;
+                    startPipe_Asia.Arguments = "/c Asia.exe " + mortality + " " + spread + " " + n;
                     startPipe_Asia.WorkingDirectory = path;
                     startPipe_Asia.UseShellExecute = true;
                     startPipe_Asia.CreateNoWindow = false;
@@ -120,11 +126,12 @@ class RegionControl{
             case 5:
                 // AFRICA
                 Console.WriteLine("Started Africa");
-                bool isRunningAf = Process.GetProcessesByName("PipeAfrica").Length > 0;
-                if(!isRunningAf){
+                // bool isRunningAf = Process.GetProcessesByName("Africa").Length > 0;
+                if (!regionsExecuted.Contains("Africa")){
+                    regionsExecuted.Add("Africa");
                     ProcessStartInfo startPipe_Africa = new ProcessStartInfo();
                     startPipe_Africa.FileName = "cmd.exe";
-                    startPipe_Africa.Arguments = "/c PipeAfrica.exe " + mortality + " " + spread;
+                    startPipe_Africa.Arguments = "/c Africa.exe " + mortality + " " + spread + " " + n;
                     startPipe_Africa.WorkingDirectory = path;
                     startPipe_Africa.UseShellExecute = true;
                     startPipe_Africa.CreateNoWindow = false;
@@ -137,11 +144,12 @@ class RegionControl{
             case 6:
                 // OCEANIA
                 Console.WriteLine("Started Oceania");
-                bool isRunningOc = Process.GetProcessesByName("PipeOceania").Length > 0;
-                if(!isRunningOc){
+                // bool isRunningOc = Process.GetProcessesByName("Oceania").Length > 0;
+                if (!regionsExecuted.Contains("Oceania")){
+                    regionsExecuted.Add("Oceania");
                     ProcessStartInfo startPipe_Oceania = new ProcessStartInfo();
                     startPipe_Oceania.FileName = "cmd.exe";
-                    startPipe_Oceania.Arguments = "/c PipeOceania.exe " + mortality + " " + spread;
+                    startPipe_Oceania.Arguments = "/c Oceania.exe " + mortality + " " + spread + " " + n;
                     startPipe_Oceania.WorkingDirectory = path;
                     startPipe_Oceania.UseShellExecute = true;
                     startPipe_Oceania.CreateNoWindow = false;
@@ -183,21 +191,25 @@ class RegionControl{
         return null;
     }
 
-    async Task MyLoop(RegionControl regionControl, double resultM, double resultS, Random random, string path){
+    async Task MyLoop(RegionControl regionControl, double resultM, double resultS, Random random, string path,string n){
         while(regionControl.getIncrementForRegions() != 6){
             // Do something
-            Console.WriteLine("Iteration {0}", regionControl.getIncrementForRegions());
-            regionControl.selectRandomRegion(random,path,resultM, resultS);
+            Console.WriteLine("Iteration: {0}", regionControl.getIncrementForRegions());
+            regionControl.selectRandomRegion(random,path,resultM, resultS,n);
             // Add a delay
             await Task.Delay(25000);
         }
     }
 
     static void Main(string[] args){
-        string pipeName = "myPipe";
+        int seed = (int)DateTime.Now.Ticks & 0x0000FFFF;
+        Random random = new Random(seed);
+        int n = random.Next();
+        string pipeName = n.ToString();
         string forwardPipeName = "forwardPipe";
+        Console.WriteLine("Random number:  {0}", n); // 9
 
-        Random random = new Random();
+        // Random random = new Random();
         string path = Directory.GetCurrentDirectory();
         RegionControl regionControl = new RegionControl();
         dynamic myObject = regionControl.selectRandomVirus(random);
@@ -208,7 +220,7 @@ class RegionControl{
         }
         Console.WriteLine("here is the mortality: {0} and the spread {1}",resultM,resultS);
 
-        Task.Run(() => regionControl.MyLoop(regionControl, resultM, resultS, random, path));
+        Task.Run(() => regionControl.MyLoop(regionControl, resultM, resultS, random, path,n.ToString()));
 
         /*
         TODO: add the thing to every so often ramdom select a random region

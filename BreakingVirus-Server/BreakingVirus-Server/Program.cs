@@ -163,6 +163,11 @@ namespace Servers {
                         setDataValue(data.ToString());
                         Console.WriteLine("Received data from consumer: {0}", data);
                         Monitor.Exit(monitor); // release the monitor lock
+
+                        if (!pipeReader.IsConnected) {
+                            // Pipe is disconnected
+                            Console.WriteLine("PipeDisconnected!");
+                        }
                     }
                 }
                 catch (Exception ex) {
