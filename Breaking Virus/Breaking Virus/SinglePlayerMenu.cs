@@ -24,33 +24,9 @@ namespace Breaking_Virus
             ventanaMain.Show();
         }
 
-        private void btn_Covid19_Click(object sender, EventArgs e)
+        private void btn_StartSimulation_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Covid-19 as the virus?", "Virus Confirmation", MessageBoxButtons.YesNo);
-            
-            if (confirmResult == DialogResult.Yes)
-            {
-                Simulacion ventanaSimulacion = new Simulacion();
-                this.Hide();
-                ventanaSimulacion.Show();
-            }
-        }
-
-        private void btn_Dengue_Click(object sender, EventArgs e)
-        {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Dengue as the virus?", "Virus Confirmation", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                Simulacion ventanaSimulacion = new Simulacion();
-                this.Hide();
-                ventanaSimulacion.Show();
-            }
-        }
-
-        private void btn_Ebola_Click(object sender, EventArgs e)
-        {
-            var confirmResult = MessageBox.Show("¿Are you sure you want to select Ebola as the virus?", "Virus Confirmation", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("¿Are you sure you want to start the simulation?", "Start Confirmation", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {

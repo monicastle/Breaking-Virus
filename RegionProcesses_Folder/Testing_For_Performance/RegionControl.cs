@@ -45,12 +45,14 @@ class RegionControl{
     private int _incrementForRegions = 0;
     List<string> regionsExecuted = new List<string>();
 
+    int cont = 1;
+
 
     public int getIncrementForRegions() { return this._incrementForRegions; }
 
     public void selectRandomRegion(Random random, String path, double mortality, double spread,string n){
-        int randomRegion = random.Next(1, 7);
-        switch (randomRegion){
+        //int randomRegion = random.Next(1, 7);
+        switch (cont){
             case 1:
                 // NORTH AMERICA
                 Console.WriteLine("Started NorthAmerica");
@@ -68,6 +70,7 @@ class RegionControl{
                     process_NorthAmerica.Start();
                     _incrementForRegions += 1;
                 }
+                cont++;
                 break;
             case 2:
                 // SOUTH AMERICA
@@ -86,6 +89,7 @@ class RegionControl{
                     process_SouthAmerica.Start();
                     _incrementForRegions += 1;
                 }
+                cont++;
                 break;
             case 3:
                 // EUROPE
@@ -104,6 +108,7 @@ class RegionControl{
                     process_Europe.Start();
                     _incrementForRegions += 1;
                 }
+                cont++;
                 break;
             case 4:
                 // ASIA
@@ -121,7 +126,7 @@ class RegionControl{
                     process_Asia.StartInfo = startPipe_Asia;
                     process_Asia.Start();
                     _incrementForRegions += 1;
-                }
+                }cont++;
                 break;
             case 5:
                 // AFRICA
@@ -140,6 +145,7 @@ class RegionControl{
                     process_Africa.Start();
                     _incrementForRegions += 1;
                 }
+                cont++;
                 break;
             case 6:
                 // OCEANIA
@@ -158,6 +164,7 @@ class RegionControl{
                     process_Oceania.Start();
                     _incrementForRegions += 1;
                 }
+                cont++;
                 break;
             default:
                 // MANEJO DE ERRORES

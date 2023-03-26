@@ -10,8 +10,8 @@ class Europe{
     static object monitor = new object();
 
     //initialize variables
-    public int _totalPopulation = 100000;
-    public int _uninfected = 99999;
+    public int _totalPopulation = 4000;
+    public int _uninfected = 3990;
     public int _infected = 10;
     public int _dead = 0;
 

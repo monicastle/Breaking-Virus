@@ -9,8 +9,8 @@ class SouthAmerica
     static object monitor = new object();
 
     //initialize variables
-    public int _totalPopulation = 100000;
-    public int _uninfected = 99999;
+    public int _totalPopulation = 4000;
+    public int _uninfected = 3990;
     public int _infected = 10;
     public int _dead = 0;
 
@@ -153,6 +153,7 @@ class SouthAmerica
         processSA.SetLvlTransmissionRate(Double.Parse(args[1]));
         Console.WriteLine("SouthAmerica mortalityrate: {0}", processSA.getLevelMortality());
         Console.WriteLine("SouthAmerica spreadrate: {0}", processSA.getLevelSpread());
+
         while (true)
         {
             try
@@ -163,6 +164,7 @@ class SouthAmerica
                     string filename_id = Path.GetFileNameWithoutExtension(AppDomain.CurrentDomain.FriendlyName);
                     // Console.WriteLine("Produced: {0}", data);
                     processSA.simulation();
+                    
                     var actualData = DateTime.Now.ToString() + "," + processSA.getTotalPopulation() + "," + processSA.getInfected() + "," + processSA.getUninfected() + "," + processSA.getDead() + "," + filename_id;
                     var buffer = Encoding.UTF8.GetBytes(actualData);
                     Monitor.Enter(monitor); // acquire the monitor lock

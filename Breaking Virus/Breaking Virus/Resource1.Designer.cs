@@ -153,46 +153,6 @@ namespace Breaking_Virus {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap puerto_Chile_NewYork {
-            get {
-                object obj = ResourceManager.GetObject("puerto_Chile-NewYork", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap puerto_Chile_Sudafrica {
-            get {
-                object obj = ResourceManager.GetObject("puerto_Chile-Sudafrica", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap puerto_Sudafrica_Australia {
-            get {
-                object obj = ResourceManager.GetObject("puerto_Sudafrica-Australia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap puerto_USA_Chile {
-            get {
-                object obj = ResourceManager.GetObject("puerto_USA-Chile", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap regresar {
             get {
                 object obj = ResourceManager.GetObject("regresar", resourceCulture);
@@ -206,6 +166,16 @@ namespace Breaking_Virus {
         internal static System.Drawing.Bitmap SelectVirusSP {
             get {
                 object obj = ResourceManager.GetObject("SelectVirusSP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VirusesDetails {
+            get {
+                object obj = ResourceManager.GetObject("VirusesDetails", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

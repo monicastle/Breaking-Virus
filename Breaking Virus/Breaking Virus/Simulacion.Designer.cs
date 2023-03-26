@@ -80,7 +80,6 @@
             this.Tlabel_Dead_NA = new System.Windows.Forms.Label();
             this.Tlabel_Infected_NA = new System.Windows.Forms.Label();
             this.Tlabel_Uninfected_NA = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel_Asia.SuspendLayout();
@@ -697,17 +696,6 @@
             this.Tlabel_Uninfected_NA.TabIndex = 0;
             this.Tlabel_Uninfected_NA.Text = "Uninfected:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Image = global::Breaking_Virus.Resource1.puerto_USA_Chile;
-            this.label3.Location = new System.Drawing.Point(171, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 25);
-            this.label3.TabIndex = 20;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -750,7 +738,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1160);
             this.Controls.Add(this.panel_SouthAmerica);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel_NorthAmerica);
             this.Controls.Add(this.panel_Oceania);
             this.Controls.Add(this.panel_Europe);
@@ -836,7 +823,6 @@
         private Label Tlabel_Dead_NA;
         private Label Tlabel_Infected_NA;
         private Label Tlabel_Uninfected_NA;
-        private Label label3;
         private Button button2;
         private Button button1;
     }
