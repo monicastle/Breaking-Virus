@@ -23,5 +23,12 @@ namespace Breaking_Virus
             this.Hide();
             ventanaSP.Show();
         }
+
+        private void btn_Multiplayer_Click(object sender, EventArgs e)
+        {
+            MultiPlayerMenu ventanaMP = new MultiPlayerMenu();
+            this.Hide();
+            ventanaMP.Show();
+        }
     }
 }

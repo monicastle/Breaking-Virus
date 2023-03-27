@@ -8,52 +8,62 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 
-class Covid19{
+class Covid19
+{
     private double _lvlMortality;
     private double _lvlSpread;
-    public Covid19(){
+    public Covid19()
+    {
         _lvlMortality = 0.02;
         _lvlSpread = 0.10;
     }
-    public double getLvlMortality(){ return _lvlMortality;}
-    public double getLvlSpread(){return _lvlSpread;}
+    public double getLvlMortality() { return _lvlMortality; }
+    public double getLvlSpread() { return _lvlSpread; }
 }
 
-class Ebola{
+class Ebola
+{
     public double _lvlMortality;
     public double _lvlSpread;
-    public Ebola(){
+    public Ebola()
+    {
         _lvlMortality = 0.02;
         _lvlSpread = 0.10;
     }
-    public double getLvlMortality(){ return _lvlMortality;}
-    public double getLvlSpread(){return _lvlSpread;}
+    public double getLvlMortality() { return _lvlMortality; }
+    public double getLvlSpread() { return _lvlSpread; }
 }
 
-class Dengue{
+class Dengue
+{
     public double _lvlMortality;
     public double _lvlSpread;
-    public Dengue(){
+    public Dengue()
+    {
         _lvlMortality = 0.02;
         _lvlSpread = 0.10;
     }
-    public double getLvlMortality(){ return _lvlMortality;}
-    public double getLvlSpread(){return _lvlSpread;}
+    public double getLvlMortality() { return _lvlMortality; }
+    public double getLvlSpread() { return _lvlSpread; }
 }
-class RegionControl{
+class RegionControl
+{
     static object monitor = new object();
     private int _incrementForRegions = 0;
 
     public int getIncrementForRegions() { return this._incrementForRegions; }
 
-    public void selectRandomRegion(Random random, String path, double mortality, double spread){
+    public void selectRandomRegion(Random random, String path, double mortality, double spread)
+    {
         int randomRegion = random.Next(1, 7);
-        switch (randomRegion){
+        switch (randomRegion)
+        {
             case 1:
                 // NORTH AMERICA
                 Console.WriteLine("Started NorthAmerica");
                 bool isRunningNA = Process.GetProcessesByName("PipeNorthAmerica").Length > 0;
-                if(!isRunningNA){
+                if (!isRunningNA)
+                {
                     ProcessStartInfo startPipe_NorthAmerica = new ProcessStartInfo();
                     startPipe_NorthAmerica.FileName = "cmd.exe";
                     startPipe_NorthAmerica.Arguments = "/c PipeNorthAmerica.exe " + mortality + " " + spread;
@@ -70,7 +80,8 @@ class RegionControl{
                 // SOUTH AMERICA
                 Console.WriteLine("Started SouthAmerica");
                 bool isRunningSA = Process.GetProcessesByName("PipeSouthAmerica").Length > 0;
-                if(!isRunningSA){
+                if (!isRunningSA)
+                {
                     ProcessStartInfo startPipe_SouthAmerica = new ProcessStartInfo();
                     startPipe_SouthAmerica.FileName = "cmd.exe";
                     startPipe_SouthAmerica.Arguments = "/c PipeSouthAmerica.exe " + mortality + " " + spread;
@@ -87,7 +98,8 @@ class RegionControl{
                 // EUROPE
                 Console.WriteLine("Started Europe");
                 bool isRunningEU = Process.GetProcessesByName("PipeEurope").Length > 0;
-                if(!isRunningEU){
+                if (!isRunningEU)
+                {
                     ProcessStartInfo startPipe_Europe = new ProcessStartInfo();
                     startPipe_Europe.FileName = "cmd.exe";
                     startPipe_Europe.Arguments = "/c PipeEurope.exe " + mortality + " " + spread;
@@ -104,7 +116,8 @@ class RegionControl{
                 // ASIA
                 Console.WriteLine("Started Asia");
                 bool isRunningAs = Process.GetProcessesByName("PipeAsia").Length > 0;
-                if(!isRunningAs){
+                if (!isRunningAs)
+                {
                     ProcessStartInfo startPipe_Asia = new ProcessStartInfo();
                     startPipe_Asia.FileName = "cmd.exe";
                     startPipe_Asia.Arguments = "/c PipeAsia.exe " + mortality + " " + spread;
@@ -121,7 +134,8 @@ class RegionControl{
                 // AFRICA
                 Console.WriteLine("Started Africa");
                 bool isRunningAf = Process.GetProcessesByName("PipeAfrica").Length > 0;
-                if(!isRunningAf){
+                if (!isRunningAf)
+                {
                     ProcessStartInfo startPipe_Africa = new ProcessStartInfo();
                     startPipe_Africa.FileName = "cmd.exe";
                     startPipe_Africa.Arguments = "/c PipeAfrica.exe " + mortality + " " + spread;
@@ -138,7 +152,8 @@ class RegionControl{
                 // OCEANIA
                 Console.WriteLine("Started Oceania");
                 bool isRunningOc = Process.GetProcessesByName("PipeOceania").Length > 0;
-                if(!isRunningOc){
+                if (!isRunningOc)
+                {
                     ProcessStartInfo startPipe_Oceania = new ProcessStartInfo();
                     startPipe_Oceania.FileName = "cmd.exe";
                     startPipe_Oceania.Arguments = "/c PipeOceania.exe " + mortality + " " + spread;
@@ -158,9 +173,11 @@ class RegionControl{
         }
     }
 
-    public dynamic selectRandomVirus(Random random){
+    public dynamic selectRandomVirus(Random random)
+    {
         int randomNumber = random.Next(1, 4);
-        switch (randomNumber){
+        switch (randomNumber)
+        {
             case 1:
                 Covid19 covid = new Covid19();
                 Console.WriteLine("Covid19 LvlMortality: " + covid.getLvlMortality());
@@ -183,17 +200,20 @@ class RegionControl{
         return null;
     }
 
-    async Task MyLoop(RegionControl regionControl, double resultM, double resultS, Random random, string path){
-        while(regionControl.getIncrementForRegions() != 6){
+    async Task MyLoop(RegionControl regionControl, double resultM, double resultS, Random random, string path)
+    {
+        while (regionControl.getIncrementForRegions() != 6)
+        {
             // Do something
             Console.WriteLine("Iteration {0}", regionControl.getIncrementForRegions());
-            regionControl.selectRandomRegion(random,path,resultM, resultS);
+            regionControl.selectRandomRegion(random, path, resultM, resultS);
             // Add a delay
             await Task.Delay(25000);
         }
     }
 
-    static void Main(string[] args){
+    static void Main(string[] args)
+    {
         string pipeName = "myPipe";
         string forwardPipeName = "forwardPipe";
 
@@ -201,12 +221,13 @@ class RegionControl{
         string path = Directory.GetCurrentDirectory();
         RegionControl regionControl = new RegionControl();
         dynamic myObject = regionControl.selectRandomVirus(random);
-        double resultM = 0.0,resultS= 0.0;
-        if(myObject != null){
+        double resultM = 0.0, resultS = 0.0;
+        if (myObject != null)
+        {
             resultM = myObject.getLvlMortality();
             resultS = myObject.getLvlSpread();
         }
-        Console.WriteLine("here is the mortality: {0} and the spread {1}",resultM,resultS);
+        Console.WriteLine("here is the mortality: {0} and the spread {1}", resultM, resultS);
 
         Task.Run(() => regionControl.MyLoop(regionControl, resultM, resultS, random, path));
 
@@ -214,11 +235,17 @@ class RegionControl{
         TODO: add the thing to every so often ramdom select a random region
         */
 
-        while (true){
-            try{
+        while (true)
+        {
+            try
+            {
+                //var myList = new List<string>();
+                //var dataJunta;
+                //List<string> regionsExecuted = new List<string>();
                 using (var pipeReader = new NamedPipeServerStream(pipeName, PipeDirection.In))
                 {
                     pipeReader.WaitForConnection();
+                    Console.WriteLine("named?: ", pipeName);
                     var buffer = new byte[1024];
                     Monitor.Enter(monitor); // acquire the monitor lock
                     pipeReader.Read(buffer, 0, buffer.Length);
@@ -226,16 +253,17 @@ class RegionControl{
                     Console.WriteLine("Consumed: {0}", data);
                     Monitor.Exit(monitor); // release the monitor lock
 
-                    // Forward data to server process
-                    // using (var forwardPipe = new NamedPipeClientStream(".", forwardPipeName, PipeDirection.Out))
-                    // {
-                    //     forwardPipe.Connect();
-                    //     var forwardBuffer = Encoding.UTF8.GetBytes(data);
-                    //     forwardPipe.Write(forwardBuffer, 0, forwardBuffer.Length);
-                    // }
+                    //Forward data to server process
+                    using (var forwardPipe = new NamedPipeClientStream(".", forwardPipeName, PipeDirection.Out))
+                    {
+                        forwardPipe.Connect();
+                        var forwardBuffer = Encoding.UTF8.GetBytes(data);
+                        forwardPipe.Write(forwardBuffer, 0, forwardBuffer.Length);
+                    }
                 }
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 Console.WriteLine("Consumer error: {0}", ex.Message);
             }
         }

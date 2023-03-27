@@ -40,7 +40,7 @@ namespace Breaking_Virus
         public Simulacion()
         {
             InitializeComponent();
-            this.serverIpAddress = IPAddress.Parse("192.168.0.13"); // Change this to the IP address of the server machine
+            this.serverIpAddress = IPAddress.Parse("192.168.1.8"); // Change this to the IP address of the server machine
             this.serverPort = 12345;
             this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
@@ -262,6 +262,11 @@ namespace Breaking_Virus
                     // Process id not valid
                     break;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

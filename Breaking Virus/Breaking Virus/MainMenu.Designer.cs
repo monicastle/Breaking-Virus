@@ -66,6 +66,7 @@
             this.btn_Multiplayer.TabIndex = 2;
             this.btn_Multiplayer.Text = "MULTIPLAYER";
             this.btn_Multiplayer.UseVisualStyleBackColor = false;
+            this.btn_Multiplayer.Click += new System.EventHandler(this.btn_Multiplayer_Click);
             // 
             // MainMenu
             // 

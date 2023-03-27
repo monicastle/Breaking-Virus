@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel_Asia = new System.Windows.Forms.Panel();
             this.titleAsia = new System.Windows.Forms.Label();
             this.dead_Asia = new System.Windows.Forms.Label();
@@ -80,8 +76,8 @@
             this.Tlabel_Dead_NA = new System.Windows.Forms.Label();
             this.Tlabel_Infected_NA = new System.Windows.Forms.Label();
             this.Tlabel_Uninfected_NA = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tittleVirus = new System.Windows.Forms.Label();
+            this.virusSelected = new System.Windows.Forms.Label();
             this.panel_Asia.SuspendLayout();
             this.panel_Africa.SuspendLayout();
             this.panel_Europe.SuspendLayout();
@@ -89,42 +85,6 @@
             this.panel_SouthAmerica.SuspendLayout();
             this.panel_NorthAmerica.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 1008);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(379, 36);
-            this.progressBar1.TabIndex = 2;
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(1502, 1008);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(378, 36);
-            this.progressBar2.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(22, 973);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 32);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "DNA";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(1776, 973);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 32);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "WORLD";
             // 
             // panel_Asia
             // 
@@ -696,39 +656,28 @@
             this.Tlabel_Uninfected_NA.TabIndex = 0;
             this.Tlabel_Uninfected_NA.Text = "Uninfected:";
             // 
-            // button2
+            // tittleVirus
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 4;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1502, 1060);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(378, 78);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "WORLD";
-            this.button2.UseVisualStyleBackColor = false;
+            this.tittleVirus.AutoSize = true;
+            this.tittleVirus.BackColor = System.Drawing.Color.Transparent;
+            this.tittleVirus.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tittleVirus.Location = new System.Drawing.Point(681, 1025);
+            this.tittleVirus.Name = "tittleVirus";
+            this.tittleVirus.Size = new System.Drawing.Size(349, 60);
+            this.tittleVirus.TabIndex = 20;
+            this.tittleVirus.Text = "YOUR VIRUS IS:";
             // 
-            // button1
+            // virusSelected
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Breaking_Virus.Resource1.ButtonsBackground;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 4;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(23, 1060);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(378, 78);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "DISEASE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.virusSelected.AutoSize = true;
+            this.virusSelected.BackColor = System.Drawing.Color.Transparent;
+            this.virusSelected.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.virusSelected.ForeColor = System.Drawing.Color.Maroon;
+            this.virusSelected.Location = new System.Drawing.Point(1030, 1025);
+            this.virusSelected.Name = "virusSelected";
+            this.virusSelected.Size = new System.Drawing.Size(209, 60);
+            this.virusSelected.TabIndex = 21;
+            this.virusSelected.Text = "COVID19";
             // 
             // Simulacion
             // 
@@ -737,18 +686,14 @@
             this.BackgroundImage = global::Breaking_Virus.Resource1.MapSimulation;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1160);
+            this.Controls.Add(this.virusSelected);
+            this.Controls.Add(this.tittleVirus);
             this.Controls.Add(this.panel_SouthAmerica);
             this.Controls.Add(this.panel_NorthAmerica);
             this.Controls.Add(this.panel_Oceania);
             this.Controls.Add(this.panel_Europe);
             this.Controls.Add(this.panel_Africa);
             this.Controls.Add(this.panel_Asia);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.Name = "Simulacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -771,10 +716,6 @@
         }
 
         #endregion
-        private ProgressBar progressBar1;
-        private ProgressBar progressBar2;
-        private Label label1;
-        private Label label2;
         private Panel panel_Asia;
         private Label Tlabel_Dead_AS;
         private Label Tlabel_Infected_AS;
@@ -823,7 +764,7 @@
         private Label Tlabel_Dead_NA;
         private Label Tlabel_Infected_NA;
         private Label Tlabel_Uninfected_NA;
-        private Button button2;
-        private Button button1;
+        private Label tittleVirus;
+        private Label virusSelected;
     }
 }
