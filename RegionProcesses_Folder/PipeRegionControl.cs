@@ -14,8 +14,8 @@ class Covid19
     private double _lvlSpread;
     public Covid19()
     {
-        _lvlMortality = 0.02;
-        _lvlSpread = 0.10;
+        _lvlMortality = 0.01;
+        _lvlSpread = 0.25;
     }
     public double getLvlMortality() { return _lvlMortality; }
     public double getLvlSpread() { return _lvlSpread; }
@@ -28,7 +28,7 @@ class Ebola
     public double _lvlSpread;
     public Ebola()
     {
-        _lvlMortality = 0.02;
+        _lvlMortality = 0.04;
         _lvlSpread = 0.10;
     }
     public double getLvlMortality() { return _lvlMortality; }
@@ -42,8 +42,8 @@ class Dengue
     public double _lvlSpread;
     public Dengue()
     {
-        _lvlMortality = 0.02;
-        _lvlSpread = 0.10;
+        _lvlMortality = 0.03;
+        _lvlSpread = 0.20;
     }
     public double getLvlMortality() { return _lvlMortality; }
     public double getLvlSpread() { return _lvlSpread; }

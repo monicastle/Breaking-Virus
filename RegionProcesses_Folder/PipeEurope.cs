@@ -11,7 +11,7 @@ class Europe{
 
     //initialize variables
     public int _totalPopulation = 100000;
-    public int _uninfected = 99999;
+    public int _uninfected = 999990;
     public int _infected = 10;
     public int _dead = 0;
 
