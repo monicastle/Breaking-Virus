@@ -47,9 +47,15 @@ namespace Servers {
         private  Socket serverSocket;
         private  List<Socket> clientSockets;
         private  static string _dataValue = "";
+        private static string _virusName = "";
+
 
         public static void setDataValue(string value){
             _dataValue = value;
+        }
+
+        public static void setVirusName(string value) {
+            _virusName = value;
         }
 
         public Server(IPAddress serverIpAddress, int serverPort) {
@@ -88,6 +94,7 @@ namespace Servers {
 
         public void Start() {
             string VirusName = receiveVirusName();
+            setVirusName(VirusName);
             Console.WriteLine("The virus named received in server: {0}", VirusName);
             // Bind the server socket to the specified IP address and port
             serverSocket.Bind(new IPEndPoint(serverIpAddress, serverPort));
@@ -103,6 +110,8 @@ namespace Servers {
                 if (clientSocket != null && clientSocket.Connected) {
                     //Console.WriteLine("Client connected!");
                     // handle client communication here
+                    sendVirusName(clientSocket);
+
                     Thread receiveThread = new Thread(receiveDataFromConsumer);
                     receiveThread.Start();
                 }
@@ -116,6 +125,12 @@ namespace Servers {
                 Thread clientThread = new Thread(() => HandleClient(clientSocket));
                 clientThread.Start();
             }
+        }
+
+        public void sendVirusName(Socket clientSocket) {
+            //first send virus name:
+            byte[] bufferVirus = Encoding.ASCII.GetBytes(_virusName); //Value from global variable
+            clientSocket.Send(bufferVirus);
         }
 
         private void HandleClient(Socket clientSocket) {
