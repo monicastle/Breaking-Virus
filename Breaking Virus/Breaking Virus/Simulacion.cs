@@ -25,6 +25,13 @@ namespace Breaking_Virus
             clientSocket.Connect(new IPEndPoint(serverIpAddress, serverPort));
             Console.WriteLine("Connected to server {0}{1}{2}", serverIpAddress, ":", serverPort);
 
+            //Receive virusName:
+            byte[] bufferVirus = new byte[1024];
+            int numBytesV = clientSocket.Receive(bufferVirus);
+            string virus_name = Encoding.ASCII.GetString(bufferVirus, 0, numBytesV);
+            Console.WriteLine("The virus name that was sent by server and received by the client: {0}",virus_name);
+            UpdateLabelVirusName(virus_name);
+
             // Receive data from the server and display it
             while (true)
             {
@@ -47,6 +54,15 @@ namespace Breaking_Virus
             // Connect();
             Thread receiveThread = new Thread(Connect);
             receiveThread.Start();
+        }
+
+        private void UpdateLabelVirusName(string text) {
+            if (virusSelected.InvokeRequired) {
+                virusSelected.Invoke((Action)(() => virusSelected.Text = text));
+            }
+            else {
+                virusSelected.Text = text;
+            }
         }
 
         private void UpdateLabelUninfected_NorthAmerica(string text){
