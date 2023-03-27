@@ -77,3 +77,4 @@ C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewP
 C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking Virus.genruntimeconfig.cache
 C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\ref\Breaking Virus.dll
 C:\Users\MONICAVALERIACASTILL\Desktop\CONCURRENCIA\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.MultiPlayerMenu.resources
+C:\Users\tyler\Documents\UNITEC\2023\UNITEC PRIMER PERIODO 2022\Concurencia\NewProyecto\Breaking-Virus\Breaking Virus\Breaking Virus\obj\Debug\net6.0-windows\Breaking_Virus.MultiPlayerMenu.resources

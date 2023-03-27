@@ -40,7 +40,7 @@ namespace Breaking_Virus
         public Simulacion()
         {
             InitializeComponent();
-            this.serverIpAddress = IPAddress.Parse("192.168.1.8"); // Change this to the IP address of the server machine
+            this.serverIpAddress = IPAddress.Parse("192.168.0.19"); // Change this to the IP address of the server machine
             this.serverPort = 12345;
             this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 

@@ -19,6 +19,7 @@ class Covid19
     }
     public double getLvlMortality() { return _lvlMortality; }
     public double getLvlSpread() { return _lvlSpread; }
+    public string getName() { return "Covid19";}
 }
 
 class Ebola
@@ -32,6 +33,7 @@ class Ebola
     }
     public double getLvlMortality() { return _lvlMortality; }
     public double getLvlSpread() { return _lvlSpread; }
+    public string getName() { return "Ebola";}
 }
 
 class Dengue
@@ -45,6 +47,7 @@ class Dengue
     }
     public double getLvlMortality() { return _lvlMortality; }
     public double getLvlSpread() { return _lvlSpread; }
+    public string getName() { return "Dengue";}
 }
 class RegionControl
 {
@@ -216,11 +219,21 @@ class RegionControl
     {
         string pipeName = "myPipe";
         string forwardPipeName = "forwardPipe";
-
+        
         Random random = new Random();
         string path = Directory.GetCurrentDirectory();
         RegionControl regionControl = new RegionControl();
         dynamic myObject = regionControl.selectRandomVirus(random);
+        Console.WriteLine("Name of virus: {0}", myObject.getName());
+
+        //Sending virus name initially
+        using (var forwardPipe = new NamedPipeClientStream(".", forwardPipeName, PipeDirection.Out))
+        {
+            forwardPipe.Connect();
+            var forwardBuffer = Encoding.UTF8.GetBytes(myObject.getName());
+            forwardPipe.Write(forwardBuffer, 0, forwardBuffer.Length);
+        }
+
         double resultM = 0.0, resultS = 0.0;
         if (myObject != null)
         {
@@ -235,10 +248,8 @@ class RegionControl
         TODO: add the thing to every so often ramdom select a random region
         */
 
-        while (true)
-        {
-            try
-            {
+        while (true){
+            try{
                 //var myList = new List<string>();
                 //var dataJunta;
                 //List<string> regionsExecuted = new List<string>();

@@ -8,6 +8,7 @@ using System.Threading;
 using System.IO;
 using System.IO.Pipes;
 using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Servers {
 
@@ -37,7 +38,6 @@ namespace Servers {
         }
 
     }
-
 
     class Server {
 
@@ -87,6 +87,8 @@ namespace Servers {
         }
 
         public void Start() {
+            string VirusName = receiveVirusName();
+            Console.WriteLine("The virus named received in server: {0}", VirusName);
             // Bind the server socket to the specified IP address and port
             serverSocket.Bind(new IPEndPoint(serverIpAddress, serverPort));
             Console.WriteLine("Server started on {0}{1}{2}", serverIpAddress, ":", serverPort);
@@ -176,11 +178,41 @@ namespace Servers {
             }
         }
 
+        public static string receiveVirusName() {
+            string pipeName = "forwardPipe";
+            Console.WriteLine("Waiting for incoming data: ");
+            try {
+                using (var pipeReader = new NamedPipeServerStream(pipeName, PipeDirection.In)) {
+                    pipeReader.WaitForConnection();
+                    var buffer = new byte[1024];
+
+                    Monitor.Enter(monitor); // acquire the monitor lock
+                    pipeReader.Read(buffer, 0, buffer.Length);
+                    var data = Encoding.UTF8.GetString(buffer).Trim('\0');
+                    // _dataValue =
+                    string result = data.ToString();
+                    Console.WriteLine("Received data from consumer: {0}", data);
+                    Monitor.Exit(monitor); // release the monitor lock
+
+                    pipeReader.Disconnect();
+                    if (!pipeReader.IsConnected) {
+                        // Pipe is disconnected
+                        Console.WriteLine("PipeDisconnected!");
+                    }
+                    return result;
+                }
+            }
+            catch (Exception ex) {
+                Console.WriteLine("Server error: {0}", ex.Message);
+            }
+            return "";
+        }
+
         static void Main(string[] args) {
             //receiveDataFromConsumer();
-            
+                       
             // Start the server on a specific IP address and port
-            IPAddress ipAddress = IPAddress.Parse("192.168.1.8"); // Change this to the IP address of the server machine
+            IPAddress ipAddress = IPAddress.Parse("192.168.0.19"); // Change this to the IP address of the server machine
             Server server = new Server(ipAddress, 12345);
             server.StartPrograms();
             server.Start();
