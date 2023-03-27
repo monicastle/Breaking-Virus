@@ -119,9 +119,9 @@
             this.dead_Asia.ForeColor = System.Drawing.Color.White;
             this.dead_Asia.Location = new System.Drawing.Point(116, 108);
             this.dead_Asia.Name = "dead_Asia";
-            this.dead_Asia.Size = new System.Drawing.Size(124, 25);
+            this.dead_Asia.Size = new System.Drawing.Size(22, 25);
             this.dead_Asia.TabIndex = 6;
-            this.dead_Asia.Text = "7,900,000,000";
+            this.dead_Asia.Text = "0";
             this.dead_Asia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infected_Asia
@@ -131,9 +131,9 @@
             this.infected_Asia.ForeColor = System.Drawing.Color.White;
             this.infected_Asia.Location = new System.Drawing.Point(116, 75);
             this.infected_Asia.Name = "infected_Asia";
-            this.infected_Asia.Size = new System.Drawing.Size(124, 25);
+            this.infected_Asia.Size = new System.Drawing.Size(22, 25);
             this.infected_Asia.TabIndex = 5;
-            this.infected_Asia.Text = "7,900,000,000";
+            this.infected_Asia.Text = "0";
             this.infected_Asia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_Asia
@@ -143,9 +143,9 @@
             this.uninfected_Asia.ForeColor = System.Drawing.Color.White;
             this.uninfected_Asia.Location = new System.Drawing.Point(116, 40);
             this.uninfected_Asia.Name = "uninfected_Asia";
-            this.uninfected_Asia.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_Asia.Size = new System.Drawing.Size(76, 25);
             this.uninfected_Asia.TabIndex = 4;
-            this.uninfected_Asia.Text = "7,900,000,000";
+            this.uninfected_Asia.Text = "100,000";
             this.uninfected_Asia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_AS
@@ -214,9 +214,9 @@
             this.dead_Africa.ForeColor = System.Drawing.Color.White;
             this.dead_Africa.Location = new System.Drawing.Point(116, 108);
             this.dead_Africa.Name = "dead_Africa";
-            this.dead_Africa.Size = new System.Drawing.Size(124, 25);
+            this.dead_Africa.Size = new System.Drawing.Size(22, 25);
             this.dead_Africa.TabIndex = 6;
-            this.dead_Africa.Text = "7,900,000,000";
+            this.dead_Africa.Text = "0";
             this.dead_Africa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infected_Africa
@@ -226,9 +226,9 @@
             this.infected_Africa.ForeColor = System.Drawing.Color.White;
             this.infected_Africa.Location = new System.Drawing.Point(116, 75);
             this.infected_Africa.Name = "infected_Africa";
-            this.infected_Africa.Size = new System.Drawing.Size(124, 25);
+            this.infected_Africa.Size = new System.Drawing.Size(22, 25);
             this.infected_Africa.TabIndex = 5;
-            this.infected_Africa.Text = "7,900,000,000";
+            this.infected_Africa.Text = "0";
             this.infected_Africa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_Africa
@@ -238,9 +238,9 @@
             this.uninfected_Africa.ForeColor = System.Drawing.Color.White;
             this.uninfected_Africa.Location = new System.Drawing.Point(116, 40);
             this.uninfected_Africa.Name = "uninfected_Africa";
-            this.uninfected_Africa.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_Africa.Size = new System.Drawing.Size(76, 25);
             this.uninfected_Africa.TabIndex = 4;
-            this.uninfected_Africa.Text = "7,900,000,000";
+            this.uninfected_Africa.Text = "100,000";
             this.uninfected_Africa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_AF
@@ -309,9 +309,9 @@
             this.dead_Europe.ForeColor = System.Drawing.Color.White;
             this.dead_Europe.Location = new System.Drawing.Point(116, 108);
             this.dead_Europe.Name = "dead_Europe";
-            this.dead_Europe.Size = new System.Drawing.Size(124, 25);
+            this.dead_Europe.Size = new System.Drawing.Size(22, 25);
             this.dead_Europe.TabIndex = 6;
-            this.dead_Europe.Text = "7,900,000,000";
+            this.dead_Europe.Text = "0";
             this.dead_Europe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infected_Europe
@@ -321,9 +321,9 @@
             this.infected_Europe.ForeColor = System.Drawing.Color.White;
             this.infected_Europe.Location = new System.Drawing.Point(116, 75);
             this.infected_Europe.Name = "infected_Europe";
-            this.infected_Europe.Size = new System.Drawing.Size(124, 25);
+            this.infected_Europe.Size = new System.Drawing.Size(22, 25);
             this.infected_Europe.TabIndex = 5;
-            this.infected_Europe.Text = "7,900,000,000";
+            this.infected_Europe.Text = "0";
             this.infected_Europe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_Europe
@@ -333,9 +333,9 @@
             this.uninfected_Europe.ForeColor = System.Drawing.Color.White;
             this.uninfected_Europe.Location = new System.Drawing.Point(116, 40);
             this.uninfected_Europe.Name = "uninfected_Europe";
-            this.uninfected_Europe.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_Europe.Size = new System.Drawing.Size(76, 25);
             this.uninfected_Europe.TabIndex = 4;
-            this.uninfected_Europe.Text = "7,900,000,000";
+            this.uninfected_Europe.Text = "100,000";
             this.uninfected_Europe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_EU
@@ -404,9 +404,9 @@
             this.dead_Oceania.ForeColor = System.Drawing.Color.White;
             this.dead_Oceania.Location = new System.Drawing.Point(116, 108);
             this.dead_Oceania.Name = "dead_Oceania";
-            this.dead_Oceania.Size = new System.Drawing.Size(124, 25);
+            this.dead_Oceania.Size = new System.Drawing.Size(22, 25);
             this.dead_Oceania.TabIndex = 6;
-            this.dead_Oceania.Text = "7,900,000,000";
+            this.dead_Oceania.Text = "0";
             this.dead_Oceania.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infected_Oceania
@@ -416,9 +416,9 @@
             this.infected_Oceania.ForeColor = System.Drawing.Color.White;
             this.infected_Oceania.Location = new System.Drawing.Point(116, 75);
             this.infected_Oceania.Name = "infected_Oceania";
-            this.infected_Oceania.Size = new System.Drawing.Size(124, 25);
+            this.infected_Oceania.Size = new System.Drawing.Size(22, 25);
             this.infected_Oceania.TabIndex = 5;
-            this.infected_Oceania.Text = "7,900,000,000";
+            this.infected_Oceania.Text = "0";
             this.infected_Oceania.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_Oceania
@@ -428,9 +428,9 @@
             this.uninfected_Oceania.ForeColor = System.Drawing.Color.White;
             this.uninfected_Oceania.Location = new System.Drawing.Point(116, 40);
             this.uninfected_Oceania.Name = "uninfected_Oceania";
-            this.uninfected_Oceania.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_Oceania.Size = new System.Drawing.Size(76, 25);
             this.uninfected_Oceania.TabIndex = 4;
-            this.uninfected_Oceania.Text = "7,900,000,000";
+            this.uninfected_Oceania.Text = "100,000";
             this.uninfected_Oceania.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_O
@@ -488,9 +488,9 @@
             this.dead_SouthAmerica.ForeColor = System.Drawing.Color.White;
             this.dead_SouthAmerica.Location = new System.Drawing.Point(116, 108);
             this.dead_SouthAmerica.Name = "dead_SouthAmerica";
-            this.dead_SouthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.dead_SouthAmerica.Size = new System.Drawing.Size(22, 25);
             this.dead_SouthAmerica.TabIndex = 6;
-            this.dead_SouthAmerica.Text = "7,900,000,000";
+            this.dead_SouthAmerica.Text = "0";
             this.dead_SouthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_SA
@@ -522,9 +522,9 @@
             this.infected_SouthAmerica.ForeColor = System.Drawing.Color.White;
             this.infected_SouthAmerica.Location = new System.Drawing.Point(116, 75);
             this.infected_SouthAmerica.Name = "infected_SouthAmerica";
-            this.infected_SouthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.infected_SouthAmerica.Size = new System.Drawing.Size(22, 25);
             this.infected_SouthAmerica.TabIndex = 5;
-            this.infected_SouthAmerica.Text = "7,900,000,000";
+            this.infected_SouthAmerica.Text = "0";
             this.infected_SouthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_SouthAmerica
@@ -534,9 +534,9 @@
             this.uninfected_SouthAmerica.ForeColor = System.Drawing.Color.White;
             this.uninfected_SouthAmerica.Location = new System.Drawing.Point(116, 40);
             this.uninfected_SouthAmerica.Name = "uninfected_SouthAmerica";
-            this.uninfected_SouthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_SouthAmerica.Size = new System.Drawing.Size(76, 25);
             this.uninfected_SouthAmerica.TabIndex = 4;
-            this.uninfected_SouthAmerica.Text = "7,900,000,000";
+            this.uninfected_SouthAmerica.Text = "100,000";
             this.uninfected_SouthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Infected_SA
@@ -594,9 +594,9 @@
             this.dead_NorthAmerica.ForeColor = System.Drawing.Color.White;
             this.dead_NorthAmerica.Location = new System.Drawing.Point(116, 108);
             this.dead_NorthAmerica.Name = "dead_NorthAmerica";
-            this.dead_NorthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.dead_NorthAmerica.Size = new System.Drawing.Size(22, 25);
             this.dead_NorthAmerica.TabIndex = 6;
-            this.dead_NorthAmerica.Text = "7,900,000,000";
+            this.dead_NorthAmerica.Text = "0";
             this.dead_NorthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infected_NorthAmerica
@@ -606,9 +606,9 @@
             this.infected_NorthAmerica.ForeColor = System.Drawing.Color.White;
             this.infected_NorthAmerica.Location = new System.Drawing.Point(116, 75);
             this.infected_NorthAmerica.Name = "infected_NorthAmerica";
-            this.infected_NorthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.infected_NorthAmerica.Size = new System.Drawing.Size(22, 25);
             this.infected_NorthAmerica.TabIndex = 5;
-            this.infected_NorthAmerica.Text = "7,900,000,000";
+            this.infected_NorthAmerica.Text = "0";
             this.infected_NorthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uninfected_NorthAmerica
@@ -618,9 +618,9 @@
             this.uninfected_NorthAmerica.ForeColor = System.Drawing.Color.White;
             this.uninfected_NorthAmerica.Location = new System.Drawing.Point(116, 40);
             this.uninfected_NorthAmerica.Name = "uninfected_NorthAmerica";
-            this.uninfected_NorthAmerica.Size = new System.Drawing.Size(124, 25);
+            this.uninfected_NorthAmerica.Size = new System.Drawing.Size(76, 25);
             this.uninfected_NorthAmerica.TabIndex = 4;
-            this.uninfected_NorthAmerica.Text = "7,900,000,000";
+            this.uninfected_NorthAmerica.Text = "100,000";
             this.uninfected_NorthAmerica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tlabel_Dead_NA
@@ -675,9 +675,9 @@
             this.virusSelected.ForeColor = System.Drawing.Color.Maroon;
             this.virusSelected.Location = new System.Drawing.Point(1030, 1025);
             this.virusSelected.Name = "virusSelected";
-            this.virusSelected.Size = new System.Drawing.Size(209, 60);
+            this.virusSelected.Size = new System.Drawing.Size(37, 60);
             this.virusSelected.TabIndex = 21;
-            this.virusSelected.Text = "COVID19";
+            this.virusSelected.Text = ".";
             // 
             // Simulacion
             // 
